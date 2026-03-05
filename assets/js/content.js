@@ -2,9 +2,9 @@
   const translations = {
     en: {
       meta: {
-        title: "Cat With 9 Tales | Neha Verma",
+        title: "A Cat With 9 Tales | Neha Verma",
         description:
-          "Storytelling portfolio of Neha Verma, an Indian-Norwegian storyteller weaving bridges between cultures."
+          "Neha Verma of Neha Verma, an Indian-Norwegian storyteller weaving bridges between cultures."
       },
       ui: {
         skipToContent: "Skip to content",
@@ -24,13 +24,13 @@
         contact: "Contact"
       },
       hero: {
-        kicker: "Storytelling Portfolio",
-        title: "Cat With 9 Tales",
+        kicker: "Neha Verma",
+        title: "A Cat With 9 Tales",
         identityShort: "Indian-Norwegian storyteller",
         mantra1: "9 Lives",
         mantra2: "9 Lenses",
         mantra3: "9 Tales",
-        identity: "I am an Indian-Norwegian storyteller.",
+        identity: "I am an Indian-Norwegian bridge-building storyteller.",
         cta: "Begin the conversation"
       },
       about: {
@@ -61,7 +61,7 @@
         closing: "I begin where I stand. Shall we try together?"
       },
       footer: {
-        line: "Cat With 9 Tales · Neha Verma"
+        line: "A Cat With 9 Tales · Neha Verma"
       },
       captions: {
         neha: "Voice of many rivers",
@@ -74,7 +74,7 @@
     },
     no: {
       meta: {
-        title: "Cat With 9 Tales | Neha Verma",
+        title: "A Cat With 9 Tales | Neha Verma",
         description:
           "Fortellerporteføljen til Neha Verma, en indisk-norsk forteller som bygger broer mellom kulturer."
       },
@@ -97,7 +97,7 @@
       },
       hero: {
         kicker: "Fortellerportefølje",
-        title: "Cat With 9 Tales",
+        title: "A Cat With 9 Tales",
         identityShort: "Indisk-norsk forteller",
         mantra1: "9 liv",
         mantra2: "9 linser",
@@ -133,7 +133,7 @@
         closing: "Jeg begynner der jeg står. Skal vi prøve sammen?"
       },
       footer: {
-        line: "Cat With 9 Tales · Neha Verma"
+        line: "A Cat With 9 Tales · Neha Verma"
       },
       captions: {
         neha: "Stemmen fra mange elver",

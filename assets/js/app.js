@@ -116,7 +116,7 @@
 
     const image = document.createElement("img");
     image.src = `${item.srcBase}.jpg`;
-    image.alt = item.alt[lang] || item.alt[fallbackLang] || "Storytelling portfolio photograph.";
+    image.alt = item.alt[lang] || item.alt[fallbackLang] || "Neha Verma photograph.";
     image.loading = eager ? "eager" : "lazy";
     image.decoding = "async";
     image.width = item.width;
@@ -482,7 +482,7 @@
     renderGallery(lang);
 
     const subject = lang === "no" ? "Fortellerhenvendelse" : "Storytelling Inquiry";
-    contactEmail.href = `mailto:neha.account@gmail.com?subject=${encodeURIComponent(subject)}`;
+    contactEmail.href = `mailto:catwith9tales@gmail.com?subject=${encodeURIComponent(subject)}`;
 
     refreshObservers();
   }
