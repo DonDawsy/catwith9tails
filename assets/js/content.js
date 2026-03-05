@@ -890,7 +890,117 @@
           text: "Gjennom naturmaterialer som leire og tekstiler, dufter og blomster, dukker og masker, skjell, steiner og talismaner får fortellinger liv i en ny dimensjon. Hvert objekt er en stille døråpning tilbake til fortellingens verden. Dette er en praksis i utvikling der fortelling møter tradisjonelt håndverk og bærer fortellingens ånd inn i håndgripelig form."
         }
       }
-    }
+    },
+    {
+      id: "img-2728-1",
+      srcBase: "assets/images/optimized/img-2728-1",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 2728 1.",
+        no: "Arkivfoto: Img 2728 1."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 2728 1",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 2728 1",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "img-2840",
+      srcBase: "assets/images/optimized/img-2840",
+      width: 1344,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 2840.",
+        no: "Arkivfoto: Img 2840."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 2840",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 2840",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "img-4792",
+      srcBase: "assets/images/optimized/img-4792",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 4792.",
+        no: "Arkivfoto: Img 4792."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 4792",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 4792",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "img-4831",
+      srcBase: "assets/images/optimized/img-4831",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 4831.",
+        no: "Arkivfoto: Img 4831."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 4831",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 4831",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "img-5239",
+      srcBase: "assets/images/optimized/img-5239",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 5239.",
+        no: "Arkivfoto: Img 5239."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 5239",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 5239",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
   ];
 
   window.siteContent = {

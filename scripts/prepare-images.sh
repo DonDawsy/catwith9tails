@@ -168,9 +168,9 @@ append_portfolio_item() {
   local item_title="$4"
   local item_block_file="$TMP_DIR/portfolio-item-${item_id}.block"
   local updated_content="$TMP_DIR/content-updated.js"
+  local content_backup="$TMP_DIR/content-backup.js"
+  local awk_status=0
   local inserted=0
-  local in_portfolio=0
-  local line
 
   cat > "$item_block_file" <<EOF
     {
@@ -197,26 +197,73 @@ append_portfolio_item() {
     },
 EOF
 
-  : > "$updated_content"
-  while IFS= read -r line || [[ -n "$line" ]]; do
-    if [[ "$line" == *"const portfolioItems = ["* ]]; then
-      in_portfolio=1
-    fi
+  cp "$CONTENT_FILE" "$content_backup"
 
-    if [[ "$in_portfolio" -eq 1 && "$inserted" -eq 0 && "$line" =~ ^[[:space:]]*\]\;[[:space:]]*$ ]]; then
-      cat "$item_block_file" >> "$updated_content"
-      inserted=1
-    fi
+  awk -v block_file="$item_block_file" '
+    function print_block(  block_line) {
+      while ((getline block_line < block_file) > 0) {
+        print block_line
+      }
+      close(block_file)
+    }
 
-    printf "%s\n" "$line" >> "$updated_content"
-  done < "$CONTENT_FILE"
+    {
+      if (!in_portfolio && $0 ~ /const portfolioItems = \[/) {
+        in_portfolio = 1
+      }
+
+      if (in_portfolio && !inserted && $0 ~ /^[[:space:]]*\];[[:space:]]*$/) {
+        if (have_prev) {
+          if (prev_line ~ /^[[:space:]]*}[[:space:]]*$/) {
+            print prev_line ","
+          } else {
+            print prev_line
+          }
+          have_prev = 0
+        }
+
+        print_block()
+        print $0
+        inserted = 1
+        next
+      }
+
+      if (have_prev) {
+        print prev_line
+      }
+      prev_line = $0
+      have_prev = 1
+    }
+
+    END {
+      if (have_prev) {
+        print prev_line
+      }
+      if (!inserted) {
+        exit 2
+      }
+    }
+  ' "$CONTENT_FILE" > "$updated_content" || awk_status=$?
+
+  if [[ "$awk_status" -eq 0 && -s "$updated_content" ]]; then
+    inserted=1
+  fi
 
   if [[ "$inserted" -ne 1 ]]; then
     echo "Failed to append portfolio item for id: $item_id" >&2
+    cp "$content_backup" "$CONTENT_FILE"
     return 1
   fi
 
   mv "$updated_content" "$CONTENT_FILE"
+
+  if command -v node >/dev/null 2>&1; then
+    if ! node --check "$CONTENT_FILE" >/dev/null 2>&1; then
+      echo "Failed to validate updated content file after adding id: $item_id" >&2
+      cp "$content_backup" "$CONTENT_FILE"
+      return 1
+    fi
+  fi
 }
 
 ensure_gallery_entry() {
