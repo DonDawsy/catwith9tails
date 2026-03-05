@@ -57,9 +57,10 @@
       portfolio: {
         eyebrow: "Portfolio",
         heading: "A glimpse through nine lenses",
-        intro: "Curated moments from performances, reflections, and journeys.",
+        intro:
+          "Nine paths winding through nine emotions into nine story worlds.\nWhich path calls to you?",
         galleryHeading: "Full photo archive",
-        galleryIntro: "Every frame in this collection sits inside a living body of story."
+        galleryIntro: "Curated moments from performances, reflections, and journeys."
       },
       bibliography: {
         eyebrow: "BIBLIOGRAPHY :",
@@ -152,9 +153,10 @@
       portfolio: {
         eyebrow: "Portefølje",
         heading: "Et glimt gjennom ni linser",
-        intro: "Utvalgte øyeblikk fra forestillinger, refleksjoner og reiser.",
+        intro:
+          "Ni stier slynger seg gjennom ni følelser inn i ni fortellerverdener.\nHvilken sti kaller på deg?",
         galleryHeading: "Fullt fotoarkiv",
-        galleryIntro: "Hvert bilde i samlingen er en del av en levende fortellerkropp."
+        galleryIntro: "Utvalgte øyeblikk fra forestillinger, refleksjoner og reiser."
       },
       bibliography: {
         eyebrow: "BIBLIOGRAFI :",
