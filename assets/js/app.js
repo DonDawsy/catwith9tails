@@ -294,12 +294,8 @@
     picture.appendChild(source);
     picture.appendChild(image);
 
-    const caption = document.createElement("figcaption");
-    caption.className = "image-lightbox-caption";
-
     frame.appendChild(closeButton);
     frame.appendChild(picture);
-    frame.appendChild(caption);
     root.appendChild(frame);
     document.body.appendChild(root);
 
@@ -320,7 +316,6 @@
       closeLabel,
       source,
       image,
-      caption,
       activeItem: null,
       trigger: null
     };
@@ -348,7 +343,6 @@
       t("ui.flipItemLabel", lang);
 
     lightbox.image.alt = alt;
-    lightbox.caption.textContent = lightbox.activeItem.captionKey ? t(lightbox.activeItem.captionKey, lang) : alt;
   }
 
   function openImageLightbox(item, lang, trigger = null) {

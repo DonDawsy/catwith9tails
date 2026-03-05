@@ -706,15 +706,6 @@ body.lightbox-open {
   background: rgba(18, 10, 4, 0.88);
 }
 
-.image-lightbox-caption {
-  margin: 0.65rem auto 0;
-  max-width: 64ch;
-  text-align: center;
-  color: #f3e7d8;
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
 .bibliography {
   background: linear-gradient(180deg, rgba(247, 241, 231, 0.75), rgba(240, 229, 214, 0.6));
   border-top: 1px solid rgba(116, 79, 52, 0.12);
