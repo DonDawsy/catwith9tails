@@ -914,28 +914,6 @@
       }
     },
     {
-      id: "img-2840",
-      srcBase: "assets/images/optimized/img-2840",
-      width: 1344,
-      height: 2200,
-      featured: false,
-      captionKey: null,
-      alt: {
-        en: "Archive photo: Img 2840.",
-        no: "Arkivfoto: Img 2840."
-      },
-      backside: {
-        en: {
-          subtitle: "Img 2840",
-          text: "Archive photo from Neha Verma's storytelling practice."
-        },
-        no: {
-          subtitle: "Img 2840",
-          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
-        }
-      }
-    },
-    {
       id: "img-4792",
       srcBase: "assets/images/optimized/img-4792",
       width: 1650,
