@@ -390,6 +390,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1rem;
+  align-items: start;
 }
 
 .feature-card {
@@ -402,14 +403,22 @@ h3 {
   box-shadow: var(--shadow-card);
 }
 
-.feature-card picture,
+.feature-card picture {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
 .feature-card img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  height: 100%;
+  display: block;
 }
 
 .feature-card img {
   object-fit: cover;
+  object-position: center 28%;
 }
 
 .feature-card figcaption {
