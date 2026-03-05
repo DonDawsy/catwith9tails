@@ -622,6 +622,18 @@ h3 {
     radial-gradient(circle at 80% 18%, rgba(153, 90, 56, 0.14), transparent 55%);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-front {
+    transform: rotateY(-26deg);
+    opacity: 0.9;
+  }
+
+  .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-back {
+    transform: rotateY(76deg);
+    opacity: 0.22;
+  }
+}
+
 .portfolio-flip.is-flipped .portfolio-flip-front {
   transform: rotateY(-180deg);
   opacity: 0;
