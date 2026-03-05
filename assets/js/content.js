@@ -25,6 +25,7 @@
         home: "Home",
         about: "About",
         portfolio: "Portfolio",
+        bibliography: "Bibliography",
         contact: "Contact"
       },
       hero: {
@@ -59,6 +60,10 @@
         intro: "Curated moments from performances, reflections, and journeys.",
         galleryHeading: "Full photo archive",
         galleryIntro: "Every frame in this collection sits inside a living body of story."
+      },
+      bibliography: {
+        eyebrow: "BIBLIOGRAPHY :",
+        heading: "Some story projects:"
       },
       contact: {
         eyebrow: "Contact",
@@ -115,6 +120,7 @@
         home: "Hjem",
         about: "Om",
         portfolio: "Portefølje",
+        bibliography: "Bibliografi",
         contact: "Kontakt"
       },
       hero: {
@@ -149,6 +155,10 @@
         intro: "Utvalgte øyeblikk fra forestillinger, refleksjoner og reiser.",
         galleryHeading: "Fullt fotoarkiv",
         galleryIntro: "Hvert bilde i samlingen er en del av en levende fortellerkropp."
+      },
+      bibliography: {
+        eyebrow: "BIBLIOGRAFI :",
+        heading: "Noen historiefortellingsprosjekter:"
       },
       contact: {
         eyebrow: "Kontakt",
