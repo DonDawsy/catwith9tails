@@ -27,6 +27,7 @@
 
   let revealObserver;
   let sectionObserver;
+  let lightbox;
 
   function byPath(object, path) {
     return path.split(".").reduce((acc, part) => {
@@ -88,6 +89,8 @@
     if (langSwitch) {
       langSwitch.setAttribute("aria-label", switchLabel);
     }
+
+    updateLightboxText(lang);
   }
 
   function renderAbout(lang) {
@@ -148,6 +151,12 @@
     button.classList.toggle("is-flipped", shouldFlip);
     button.setAttribute("aria-pressed", String(shouldFlip));
     button.setAttribute("aria-label", buildFlipAriaLabel(item, lang, shouldFlip));
+  }
+
+  function buildGalleryAriaLabel(item, lang) {
+    const actionLabel = t("ui.openImageView", lang);
+    const itemLabel = item.alt[lang] || item.alt[fallbackLang] || t("ui.flipItemLabel", lang);
+    return `${actionLabel}: ${itemLabel}`;
   }
 
   function createFlippableCard(item, lang, cardClassName, transitionDelay, eager = false) {
@@ -214,6 +223,168 @@
     return figure;
   }
 
+  function createGalleryCard(item, lang, transitionDelay) {
+    const figure = document.createElement("figure");
+    figure.className = "gallery-card reveal";
+    figure.style.transitionDelay = transitionDelay;
+
+    const imageButton = document.createElement("button");
+    imageButton.type = "button";
+    imageButton.className = "gallery-image-button";
+    imageButton.setAttribute("aria-label", buildGalleryAriaLabel(item, lang));
+
+    const media = document.createElement("div");
+    media.className = "gallery-image-media";
+    media.appendChild(createPicture(item, lang));
+    imageButton.appendChild(media);
+
+    if (item.captionKey) {
+      const caption = document.createElement("p");
+      caption.className = "portfolio-front-caption";
+      caption.textContent = t(item.captionKey, lang);
+      imageButton.appendChild(caption);
+    }
+
+    imageButton.addEventListener("click", () => {
+      openImageLightbox(item, lang, imageButton);
+    });
+
+    figure.appendChild(imageButton);
+    return figure;
+  }
+
+  function createImageLightbox() {
+    const root = document.createElement("div");
+    root.className = "image-lightbox";
+    root.hidden = true;
+    root.setAttribute("aria-hidden", "true");
+
+    const frame = document.createElement("figure");
+    frame.className = "image-lightbox-frame";
+    frame.setAttribute("role", "dialog");
+    frame.setAttribute("aria-modal", "true");
+
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.className = "image-lightbox-close";
+
+    const closeLabel = document.createElement("span");
+    closeLabel.className = "sr-only";
+
+    const closeGlyph = document.createElement("span");
+    closeGlyph.textContent = "x";
+    closeGlyph.setAttribute("aria-hidden", "true");
+
+    closeButton.appendChild(closeLabel);
+    closeButton.appendChild(closeGlyph);
+
+    const picture = document.createElement("picture");
+    picture.className = "image-lightbox-media";
+
+    const source = document.createElement("source");
+    source.type = "image/webp";
+
+    const image = document.createElement("img");
+    image.decoding = "async";
+
+    picture.appendChild(source);
+    picture.appendChild(image);
+
+    const caption = document.createElement("figcaption");
+    caption.className = "image-lightbox-caption";
+
+    frame.appendChild(closeButton);
+    frame.appendChild(picture);
+    frame.appendChild(caption);
+    root.appendChild(frame);
+    document.body.appendChild(root);
+
+    closeButton.addEventListener("click", () => {
+      closeImageLightbox();
+    });
+
+    root.addEventListener("click", (event) => {
+      if (event.target === root) {
+        closeImageLightbox();
+      }
+    });
+
+    return {
+      root,
+      frame,
+      closeButton,
+      closeLabel,
+      source,
+      image,
+      caption,
+      activeItem: null,
+      trigger: null
+    };
+  }
+
+  function isImageLightboxOpen() {
+    return !!(lightbox && !lightbox.root.hidden);
+  }
+
+  function updateLightboxText(lang) {
+    if (!lightbox) {
+      return;
+    }
+
+    lightbox.closeLabel.textContent = t("ui.closeImageView", lang);
+    lightbox.frame.setAttribute("aria-label", t("ui.imageDialogLabel", lang));
+
+    if (!lightbox.activeItem) {
+      return;
+    }
+
+    const alt =
+      lightbox.activeItem.alt[lang] ||
+      lightbox.activeItem.alt[fallbackLang] ||
+      t("ui.flipItemLabel", lang);
+
+    lightbox.image.alt = alt;
+    lightbox.caption.textContent = lightbox.activeItem.captionKey ? t(lightbox.activeItem.captionKey, lang) : alt;
+  }
+
+  function openImageLightbox(item, lang, trigger = null) {
+    if (!lightbox) {
+      return;
+    }
+
+    lightbox.activeItem = item;
+    lightbox.trigger = trigger;
+
+    lightbox.source.srcset = `${item.srcBase}.webp`;
+    lightbox.image.src = `${item.srcBase}.jpg`;
+
+    updateLightboxText(lang);
+
+    lightbox.root.hidden = false;
+    lightbox.root.classList.add("is-open");
+    lightbox.root.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+    lightbox.closeButton.focus();
+  }
+
+  function closeImageLightbox(restoreFocus = true) {
+    if (!isImageLightboxOpen()) {
+      return;
+    }
+
+    lightbox.root.classList.remove("is-open");
+    lightbox.root.hidden = true;
+    lightbox.root.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+
+    if (restoreFocus && lightbox.trigger && document.contains(lightbox.trigger)) {
+      lightbox.trigger.focus();
+    }
+
+    lightbox.activeItem = null;
+    lightbox.trigger = null;
+  }
+
   function renderFeatured(lang) {
     const featuredItems = portfolioItems.filter((item) => item.featured);
     featuredGrid.innerHTML = "";
@@ -230,7 +401,7 @@
 
     portfolioItems.forEach((item, index) => {
       const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
-      const card = createFlippableCard(item, lang, "gallery-card", transitionDelay);
+      const card = createGalleryCard(item, lang, transitionDelay);
       galleryGrid.appendChild(card);
     });
   }
@@ -299,6 +470,8 @@
   }
 
   function applyLanguage(lang) {
+    closeImageLightbox(false);
+
     state.lang = lang;
     localStorage.setItem(storageKey, lang);
 
@@ -331,6 +504,12 @@
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
+        if (isImageLightboxOpen()) {
+          event.preventDefault();
+          closeImageLightbox();
+          return;
+        }
+
         closeMenu();
       }
     });
@@ -362,6 +541,7 @@
     });
   }
 
+  lightbox = createImageLightbox();
   initializeMenu();
   initializeLanguageButtons();
   applyLanguage(state.lang);

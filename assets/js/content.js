@@ -12,7 +12,10 @@
         flipToBack: "Show story text",
         flipToFront: "Show image",
         flipItemLabel: "Portfolio image",
-        flipFallbackText: "Story details coming soon."
+        flipFallbackText: "Story details coming soon.",
+        openImageView: "View full image",
+        closeImageView: "Close image view",
+        imageDialogLabel: "Full image view"
       },
       nav: {
         home: "Home",
@@ -81,7 +84,10 @@
         flipToBack: "Vis fortellertekst",
         flipToFront: "Vis bilde",
         flipItemLabel: "Porteføljebilde",
-        flipFallbackText: "Historietekst kommer snart."
+        flipFallbackText: "Historietekst kommer snart.",
+        openImageView: "Vis bilde i full størrelse",
+        closeImageView: "Lukk bildevisning",
+        imageDialogLabel: "Bilde i full størrelse"
       },
       nav: {
         home: "Hjem",

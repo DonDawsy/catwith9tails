@@ -454,6 +454,51 @@ h3 {
   --flip-card-height: clamp(14rem, 29vw, 19rem);
 }
 
+.gallery-image-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: var(--flip-card-height);
+  min-height: 0;
+  padding: 0;
+  border: 1px solid rgba(102, 71, 47, 0.16);
+  border-radius: inherit;
+  background: var(--surface);
+  text-align: left;
+  color: inherit;
+  box-shadow: 0 8px 18px rgba(50, 28, 15, 0.09);
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.gallery-image-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(50, 28, 15, 0.14);
+}
+
+.gallery-image-button:focus-visible {
+  outline: 3px solid #be6b3d;
+  outline-offset: -3px;
+}
+
+.gallery-image-media {
+  flex: 1;
+  min-height: 0;
+}
+
+.gallery-image-media picture,
+.gallery-image-media img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-image-media img {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
 .portfolio-flip {
   position: relative;
   display: block;
@@ -602,6 +647,83 @@ h3 {
   font-size: 0.92rem;
   line-height: 1.5;
   color: #4d392d;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: clamp(0.8rem, 2.7vw, 2rem);
+  background: rgba(17, 10, 6, 0.82);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.image-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-lightbox-frame {
+  position: relative;
+  width: auto;
+  max-width: min(96vw, 1120px);
+  margin: 0;
+  display: grid;
+  justify-items: center;
+}
+
+.image-lightbox-media {
+  display: block;
+  width: auto;
+  max-width: min(96vw, 1120px);
+}
+
+.image-lightbox-media img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(96vw, 1120px);
+  max-height: min(84vh, 980px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 236, 217, 0.24);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.45);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 1px solid rgba(255, 244, 235, 0.55);
+  border-radius: 999px;
+  background: rgba(18, 10, 4, 0.68);
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.image-lightbox-close:hover {
+  background: rgba(18, 10, 4, 0.88);
+}
+
+.image-lightbox-caption {
+  margin: 0.65rem auto 0;
+  max-width: 64ch;
+  text-align: center;
+  color: #f3e7d8;
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .contact {
@@ -825,5 +947,10 @@ h3 {
 
   .portfolio-flip.is-flipped .portfolio-flip-back {
     opacity: 1;
+  }
+
+  .gallery-image-button,
+  .image-lightbox {
+    transition: none;
   }
 }
