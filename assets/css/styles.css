@@ -609,7 +609,7 @@ h3 {
 
 @media (hover: hover) and (pointer: fine) {
   .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-inner {
-    transform: rotateY(-24deg);
+    transform: rotateY(-16deg);
   }
 }
 
