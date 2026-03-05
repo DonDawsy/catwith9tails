@@ -44,7 +44,7 @@
           "Steeped in culture at the School of Life in India, and later educated at the School of Storytelling in England, I carry forward a third-generation lineage of stories in blood, bone, and practice.",
           "As an Indian-Norwegian, questions of belonging and identity, searching for roots, and building bridges between East and West have become deeply personal quests. The seeking itself gives me the colors and threads with which I now weave my own stories.",
           "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever.",
-          "How does one build a bridge? One step. One bend of the river. One stone at a time. I begin where I stand."
+          "How does one build a bridge?\n\nBegin with one step.\nOne bend of the river.\nOne stone at a time.\nI Begin where I stand."
         ]
       },
       portfolio: {
