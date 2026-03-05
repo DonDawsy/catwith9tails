@@ -979,6 +979,72 @@
         }
       }
     },
+    {
+      id: "img-7315",
+      srcBase: "assets/images/optimized/img-7315",
+      width: 1669,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 7315.",
+        no: "Arkivfoto: Img 7315."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 7315",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 7315",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "img-8971",
+      srcBase: "assets/images/optimized/img-8971",
+      width: 2200,
+      height: 1977,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 8971.",
+        no: "Arkivfoto: Img 8971."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 8971",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 8971",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "att-oqndn9uoersoaagen2l0rvruhsttg729c-wiayr2nym",
+      srcBase: "assets/images/optimized/att-oqndn9uoersoaagen2l0rvruhsttg729c-wiayr2nym",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Att Oqndn9uoersoaagen2l0rvruhsttg729c Wiayr2nym.",
+        no: "Arkivfoto: Att Oqndn9uoersoaagen2l0rvruhsttg729c Wiayr2nym."
+      },
+      backside: {
+        en: {
+          subtitle: "Att Oqndn9uoersoaagen2l0rvruhsttg729c Wiayr2nym",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Att Oqndn9uoersoaagen2l0rvruhsttg729c Wiayr2nym",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
   ];
 
   window.siteContent = {
