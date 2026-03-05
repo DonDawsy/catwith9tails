@@ -379,7 +379,13 @@
   }
 
   function renderFeatured(lang) {
-    const featuredItems = portfolioItems.filter((item) => item.featured);
+    const featuredItems = portfolioItems
+      .filter((item) => item.featured)
+      .sort((a, b) => {
+        const aOrder = Number.isFinite(a.featuredOrder) ? a.featuredOrder : Number.POSITIVE_INFINITY;
+        const bOrder = Number.isFinite(b.featuredOrder) ? b.featuredOrder : Number.POSITIVE_INFINITY;
+        return aOrder - bOrder;
+      });
     featuredGrid.innerHTML = "";
 
     featuredItems.forEach((item, index) => {

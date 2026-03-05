@@ -71,7 +71,16 @@
         audience: "Gathered in attentive silence",
         archivePortraitI: "Archive portrait I",
         archivePortraitII: "Archive portrait II",
-        archivePortraitIII: "Archive portrait III"
+        archivePortraitIII: "Archive portrait III",
+        storyMedicine: "Story Medicine",
+        generationalJourneys: "Generational Journeys",
+        soundJourneys: "Sound Journeys",
+        childrensStorytelling: "Children's Storytelling",
+        flowArtStory: "Flow Art & Story",
+        communityGatherings: "Community Gatherings",
+        immersiveStoryRetreats: "Immersive Story Retreats",
+        storyPictureBooks: "Story Picture Books",
+        handcraftedStory: "Handcrafted Story"
       }
     },
     no: {
@@ -146,7 +155,16 @@
         audience: "Samlet i oppmerksom stillhet",
         archivePortraitI: "Arkivportrett I",
         archivePortraitII: "Arkivportrett II",
-        archivePortraitIII: "Arkivportrett III"
+        archivePortraitIII: "Arkivportrett III",
+        storyMedicine: "Story Medicine",
+        generationalJourneys: "Generational Journeys",
+        soundJourneys: "Sound Journeys",
+        childrensStorytelling: "Children's Storytelling",
+        flowArtStory: "Flow Art & Story",
+        communityGatherings: "Community Gatherings",
+        immersiveStoryRetreats: "Immersive Story Retreats",
+        storyPictureBooks: "Story Picture Books",
+        handcraftedStory: "Handcrafted Story"
       }
     }
   };
@@ -158,7 +176,7 @@
       srcBase: "assets/images/optimized/neha-verma",
       width: 2200,
       height: 1586,
-      featured: true,
+      featured: false,
       captionKey: "captions.neha",
       alt: {
         en: "Portrait of storyteller Neha Verma against warm stage light.",
@@ -180,7 +198,7 @@
       srcBase: "assets/images/optimized/storytelling",
       width: 1645,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.storytelling",
       alt: {
         en: "Storytelling portrait from a live performance setting.",
@@ -202,7 +220,7 @@
       srcBase: "assets/images/optimized/the-journeys-of-all-my-mothers",
       width: 1094,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.mothers",
       alt: {
         en: "Artwork and title image for The Journeys of All My Mothers.",
@@ -224,7 +242,7 @@
       srcBase: "assets/images/optimized/tomter-innbyggertorg-og-bibliotek",
       width: 2200,
       height: 1237,
-      featured: true,
+      featured: false,
       captionKey: "captions.tomter",
       alt: {
         en: "Storytelling event setting at Tomter community library.",
@@ -246,7 +264,7 @@
       srcBase: "assets/images/optimized/img-7325",
       width: 1226,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.candle",
       alt: {
         en: "Atmospheric portrait from a storytelling session in warm tones.",
@@ -269,19 +287,20 @@
       width: 2200,
       height: 1650,
       featured: true,
-      captionKey: "captions.audience",
+      featuredOrder: 3,
+      captionKey: "captions.soundJourneys",
       alt: {
-        en: "Documentary scene with listeners gathered during a cultural event.",
-        no: "Dokumentarisk scene med publikum samlet under et kulturarrangement."
+        en: "Sound journey session with listeners moving through story and rhythm together.",
+        no: "Sound journey session with listeners moving through story and rhythm together."
       },
       backside: {
         en: {
-          subtitle: "Shared Listening",
-          text: "A documentary glimpse of collective attention, where the audience becomes part of the story."
+          subtitle: "Voice, Rhythm, and Collective Listening",
+          text: "In the beginning, out of silence came sound. The human voice and cadence of some of the oldest spoken words (mantras) with the rhythm and sonority of intuitive instruments (yantras) create soundscapes where listeners and storyteller travel deeper together through the current of a story."
         },
         no: {
-          subtitle: "Felles lytting",
-          text: "Et dokumentarisk glimt av felles oppmerksomhet, der publikum blir en del av fortellingen."
+          subtitle: "Voice, Rhythm, and Collective Listening",
+          text: "In the beginning, out of silence came sound. The human voice and cadence of some of the oldest spoken words (mantras) with the rhythm and sonority of intuitive instruments (yantras) create soundscapes where listeners and storyteller travel deeper together through the current of a story."
         }
       }
     },
@@ -290,7 +309,7 @@
       srcBase: "assets/images/optimized/1a0bd294-63b2-40f2-93ac-e0d70841cc9c",
       width: 1650,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.archivePortraitI",
       alt: {
         en: "Portrait photograph from Neha Verma's storytelling archive.",
@@ -312,7 +331,7 @@
       srcBase: "assets/images/optimized/3ed0bddc-9eb2-49d7-a121-1c6e571a4849",
       width: 1650,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.archivePortraitII",
       alt: {
         en: "Performance image from a reflective storytelling evening.",
@@ -334,7 +353,7 @@
       srcBase: "assets/images/optimized/50ab27b4-3d4a-4e32-a034-ca35dffd008a",
       width: 1650,
       height: 2200,
-      featured: true,
+      featured: false,
       captionKey: "captions.archivePortraitIII",
       alt: {
         en: "Story portrait with layered textures and warm light.",
@@ -422,20 +441,21 @@
       srcBase: "assets/images/optimized/img-7294",
       width: 1566,
       height: 2200,
-      featured: false,
-      captionKey: null,
+      featured: true,
+      featuredOrder: 6,
+      captionKey: "captions.communityGatherings",
       alt: {
-        en: "Vertical frame from a storytelling rehearsal moment.",
-        no: "Vertikalt utsnitt fra et øyeblikk i fortellerøvelse."
+        en: "Community storytelling gathering around shared food and conversation.",
+        no: "Community storytelling gathering around shared food and conversation."
       },
       backside: {
         en: {
-          subtitle: "Rehearsal Moment",
-          text: "Vertical frame from a storytelling rehearsal moment."
+          subtitle: "Food, Story, and Shared Tables",
+          text: "Across cultures, stories and food have always travelled together. Community storytelling events bring people together in shared civic spaces to listen, eat, and connect. Food nourishes the body, while stories nourish the soul. A good meal and a good story remain two of humanity's oldest ways of building community."
         },
         no: {
-          subtitle: "Øvingsøyeblikk",
-          text: "Vertikalt utsnitt fra et øyeblikk i fortellerøvelse."
+          subtitle: "Food, Story, and Shared Tables",
+          text: "Across cultures, stories and food have always travelled together. Community storytelling events bring people together in shared civic spaces to listen, eat, and connect. Food nourishes the body, while stories nourish the soul. A good meal and a good story remain two of humanity's oldest ways of building community."
         }
       }
     },
@@ -444,20 +464,21 @@
       srcBase: "assets/images/optimized/img-7295",
       width: 2200,
       height: 1243,
-      featured: false,
-      captionKey: null,
+      featured: true,
+      featuredOrder: 1,
+      captionKey: "captions.storyMedicine",
       alt: {
-        en: "Panoramic detail from a performance environment.",
-        no: "Panoramisk detalj fra et fremføringsmiljø."
+        en: "Story medicine session in performance space.",
+        no: "Story medicine session in performance space."
       },
       backside: {
         en: {
-          subtitle: "Panoramic Stage",
-          text: "Panoramic detail from a performance environment."
+          subtitle: "Archetypal Stories as Inner Maps",
+          text: "Folktales and myths that carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
         },
         no: {
-          subtitle: "Panoramascene",
-          text: "Panoramisk detalj fra et fremføringsmiljø."
+          subtitle: "Archetypal Stories as Inner Maps",
+          text: "Folktales and myths that carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
         }
       }
     },
@@ -728,66 +749,138 @@
     {
       id: "img-8424",
       srcBase: "assets/images/optimized/img-8424",
-      width: 2200,
-      height: 1650,
-      featured: false,
-      captionKey: null,
+      width: 1650,
+      height: 2200,
+      featured: true,
+      featuredOrder: 7,
+      captionKey: "captions.immersiveStoryRetreats",
       alt: {
-        en: "Horizontal documentary shot from a storytelling project.",
-        no: "Horisontalt dokumentarbilde fra et fortellerprosjekt."
+        en: "Story retreat moment in an outdoor landscape setting.",
+        no: "Story retreat moment in an outdoor landscape setting."
       },
       backside: {
         en: {
-          subtitle: "Documentary Scene",
-          text: "Horizontal documentary shot from a storytelling project."
+          subtitle: "Journeys Through Landscape and Myth",
+          text: "Stories live in landscapes - Mountains, forests, coastlines, and deserts all hold the echoes of the stories that grew from them. Through immersive retreats and open-air story walks, participants explore mythology while moving through the land itself. Travel becomes both an outer and inner journey where place, story, and personal reflection meet."
         },
         no: {
-          subtitle: "Dokumentarscene",
-          text: "Horisontalt dokumentarbilde fra et fortellerprosjekt."
+          subtitle: "Journeys Through Landscape and Myth",
+          text: "Stories live in landscapes - Mountains, forests, coastlines, and deserts all hold the echoes of the stories that grew from them. Through immersive retreats and open-air story walks, participants explore mythology while moving through the land itself. Travel becomes both an outer and inner journey where place, story, and personal reflection meet."
         }
       }
     },
     {
       id: "img-8557",
       srcBase: "assets/images/optimized/img-8557",
-      width: 2200,
-      height: 1650,
-      featured: false,
-      captionKey: null,
+      width: 1650,
+      height: 2200,
+      featured: true,
+      featuredOrder: 2,
+      captionKey: "captions.generationalJourneys",
       alt: {
-        en: "Environmental frame from an artistic storytelling context.",
-        no: "Miljøutsnitt fra en kunstnerisk fortellerkontekst."
+        en: "Generational journey portrait centered on body memory and story.",
+        no: "Generational journey portrait centered on body memory and story."
       },
       backside: {
         en: {
-          subtitle: "Artistic Context",
-          text: "Environmental frame from an artistic storytelling context."
+          subtitle: "Somatic Storytelling and Ancestral Memory",
+          text: "Stories move through generations like roots through soil. Through guided visualization, movement, and story circles, participants explore the echoes of personal and ancestral stories carried in the body. These journeys acknowledge the dance of feminine and masculine energies that shape us."
         },
         no: {
-          subtitle: "Kunstnerisk kontekst",
-          text: "Miljøutsnitt fra en kunstnerisk fortellerkontekst."
+          subtitle: "Somatic Storytelling and Ancestral Memory",
+          text: "Stories move through generations like roots through soil. Through guided visualization, movement, and story circles, participants explore the echoes of personal and ancestral stories carried in the body. These journeys acknowledge the dance of feminine and masculine energies that shape us."
         }
       }
     },
     {
       id: "img-9897",
       srcBase: "assets/images/optimized/img-9897",
-      width: 2200,
-      height: 1650,
-      featured: false,
-      captionKey: null,
+      width: 1650,
+      height: 2200,
+      featured: true,
+      featuredOrder: 5,
+      captionKey: "captions.flowArtStory",
       alt: {
-        en: "Landscape composition from Neha Verma's visual archive.",
-        no: "Landskapskomposisjon fra Neha Vermas visuelle arkiv."
+        en: "Flow art workshop where story transforms into visual form.",
+        no: "Flow art workshop where story transforms into visual form."
       },
       backside: {
         en: {
-          subtitle: "Visual Archive",
-          text: "Landscape composition from Neha Verma's visual archive."
+          subtitle: "Letting Stories Become Images",
+          text: "Sometimes stories desire flow into images. Color becomes the main language. Through story as a frame and music as gentle creative guidance, participants allow imagination and story to move intuitively onto paper. The result is visual traces of inner landscapes emerging through story."
         },
         no: {
-          subtitle: "Visuelt arkiv",
-          text: "Landskapskomposisjon fra Neha Vermas visuelle arkiv."
+          subtitle: "Letting Stories Become Images",
+          text: "Sometimes stories desire flow into images. Color becomes the main language. Through story as a frame and music as gentle creative guidance, participants allow imagination and story to move intuitively onto paper. The result is visual traces of inner landscapes emerging through story."
+        }
+      }
+    },
+    {
+      id: "childrens-tales",
+      srcBase: "assets/images/optimized/childrens-tales",
+      width: 2200,
+      height: 1241,
+      featured: true,
+      featuredOrder: 4,
+      captionKey: "captions.childrensStorytelling",
+      alt: {
+        en: "Children gathered for participatory storytelling.",
+        no: "Children gathered for participatory storytelling."
+      },
+      backside: {
+        en: {
+          subtitle: "Cultivating weaves for the next generation",
+          text: "In a fast digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
+        },
+        no: {
+          subtitle: "Cultivating weaves for the next generation",
+          text: "In a fast digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
+        }
+      }
+    },
+    {
+      id: "IMG_0172",
+      srcBase: "assets/images/optimized/IMG_0172",
+      width: 2200,
+      height: 1700,
+      featured: true,
+      featuredOrder: 8,
+      captionKey: "captions.storyPictureBooks",
+      alt: {
+        en: "Story picture book spread with illustrated narrative scenes.",
+        no: "Story picture book spread with illustrated narrative scenes."
+      },
+      backside: {
+        en: {
+          subtitle: "Stories that Travel Across Pages",
+          text: "Picture books that allow stories to travel through both words and images, inviting readers of all ages into a visual storytelling experience. Through carefully crafted imagery and narrative, these books carry timeless tales across generations, cultures, and languages."
+        },
+        no: {
+          subtitle: "Stories that Travel Across Pages",
+          text: "Picture books that allow stories to travel through both words and images, inviting readers of all ages into a visual storytelling experience. Through carefully crafted imagery and narrative, these books carry timeless tales across generations, cultures, and languages."
+        }
+      }
+    },
+    {
+      id: "IMG_7400",
+      srcBase: "assets/images/optimized/IMG_7400",
+      width: 2200,
+      height: 1639,
+      featured: true,
+      featuredOrder: 9,
+      captionKey: "captions.handcraftedStory",
+      alt: {
+        en: "Handcrafted storytelling objects made from natural materials.",
+        no: "Handcrafted storytelling objects made from natural materials."
+      },
+      backside: {
+        en: {
+          subtitle: "Some stories want to be held in our hands.",
+          text: "Through natural materials like clay and textiles, perfumes and flowers, puppets and masks, shells stones and talismans stories come to life in a new dimension. Each object a quiet doorway back into the world of story. This is an evolving practice where storytelling meets traditional craft, carrying the spirit of the tale into tangible form."
+        },
+        no: {
+          subtitle: "Some stories want to be held in our hands.",
+          text: "Through natural materials like clay and textiles, perfumes and flowers, puppets and masks, shells stones and talismans stories come to life in a new dimension. Each object a quiet doorway back into the world of story. This is an evolving practice where storytelling meets traditional craft, carrying the spirit of the tale into tangible form."
         }
       }
     }
