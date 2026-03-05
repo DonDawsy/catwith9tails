@@ -27,6 +27,7 @@
 
   let revealObserver;
   let sectionObserver;
+  let lightbox;
 
   function byPath(object, path) {
     return path.split(".").reduce((acc, part) => {
@@ -88,6 +89,8 @@
     if (langSwitch) {
       langSwitch.setAttribute("aria-label", switchLabel);
     }
+
+    updateLightboxText(lang);
   }
 
   function renderAbout(lang) {
@@ -113,7 +116,7 @@
 
     const image = document.createElement("img");
     image.src = `${item.srcBase}.jpg`;
-    image.alt = item.alt[lang] || item.alt[fallbackLang] || "Storytelling portfolio photograph.";
+    image.alt = item.alt[lang] || item.alt[fallbackLang] || "Neha Verma photograph.";
     image.loading = eager ? "eager" : "lazy";
     image.decoding = "async";
     image.width = item.width;
@@ -123,23 +126,273 @@
     return picture;
   }
 
+  function getBacksideContent(item, lang) {
+    const fallbackBackside = item.backside && item.backside[fallbackLang] ? item.backside[fallbackLang] : {};
+    const localBackside = item.backside && item.backside[lang] ? item.backside[lang] : fallbackBackside;
+
+    return {
+      subtitle: localBackside.subtitle || fallbackBackside.subtitle || "",
+      text:
+        localBackside.text ||
+        fallbackBackside.text ||
+        item.alt[lang] ||
+        item.alt[fallbackLang] ||
+        t("ui.flipFallbackText", lang)
+    };
+  }
+
+  function buildFlipAriaLabel(item, lang, isFlipped) {
+    const actionLabel = isFlipped ? t("ui.flipToFront", lang) : t("ui.flipToBack", lang);
+    const itemLabel = item.alt[lang] || item.alt[fallbackLang] || t("ui.flipItemLabel", lang);
+    return `${actionLabel}: ${itemLabel}`;
+  }
+
+  function setCardFlipState(button, item, lang, shouldFlip) {
+    button.classList.toggle("is-flipped", shouldFlip);
+    button.setAttribute("aria-pressed", String(shouldFlip));
+    button.setAttribute("aria-label", buildFlipAriaLabel(item, lang, shouldFlip));
+  }
+
+  function buildGalleryAriaLabel(item, lang) {
+    const actionLabel = t("ui.openImageView", lang);
+    const itemLabel = item.alt[lang] || item.alt[fallbackLang] || t("ui.flipItemLabel", lang);
+    return `${actionLabel}: ${itemLabel}`;
+  }
+
+  function createFlippableCard(item, lang, cardClassName, transitionDelay, eager = false) {
+    const figure = document.createElement("figure");
+    figure.className = `${cardClassName} reveal`;
+    figure.style.transitionDelay = transitionDelay;
+
+    const flipButton = document.createElement("button");
+    flipButton.type = "button";
+    flipButton.className = "portfolio-flip";
+    setCardFlipState(flipButton, item, lang, false);
+
+    const flipInner = document.createElement("div");
+    flipInner.className = "portfolio-flip-inner";
+
+    const frontFace = document.createElement("div");
+    frontFace.className = "portfolio-flip-face portfolio-flip-front";
+
+    const frontMedia = document.createElement("div");
+    frontMedia.className = "portfolio-flip-media";
+    frontMedia.appendChild(createPicture(item, lang, eager));
+    frontFace.appendChild(frontMedia);
+
+    if (item.captionKey) {
+      const frontCaption = document.createElement("p");
+      frontCaption.className = "portfolio-front-caption";
+      frontCaption.textContent = t(item.captionKey, lang);
+      frontFace.appendChild(frontCaption);
+    }
+
+    const backFace = document.createElement("div");
+    backFace.className = "portfolio-flip-face portfolio-flip-back";
+    const backside = getBacksideContent(item, lang);
+
+    if (backside.subtitle) {
+      const backSubtitle = document.createElement("p");
+      backSubtitle.className = "portfolio-back-subtitle";
+      backSubtitle.textContent = backside.subtitle;
+      backFace.appendChild(backSubtitle);
+    }
+
+    const backText = document.createElement("p");
+    backText.className = "portfolio-back-text";
+    backText.textContent = backside.text;
+    backFace.appendChild(backText);
+
+    flipInner.appendChild(frontFace);
+    flipInner.appendChild(backFace);
+    flipButton.appendChild(flipInner);
+    figure.appendChild(flipButton);
+
+    flipButton.addEventListener("click", () => {
+      const nextFlippedState = !flipButton.classList.contains("is-flipped");
+      setCardFlipState(flipButton, item, lang, nextFlippedState);
+    });
+
+    flipButton.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && flipButton.classList.contains("is-flipped")) {
+        event.preventDefault();
+        setCardFlipState(flipButton, item, lang, false);
+      }
+    });
+
+    return figure;
+  }
+
+  function createGalleryCard(item, lang, transitionDelay) {
+    const figure = document.createElement("figure");
+    figure.className = "gallery-card reveal";
+    figure.style.transitionDelay = transitionDelay;
+
+    const imageButton = document.createElement("button");
+    imageButton.type = "button";
+    imageButton.className = "gallery-image-button";
+    imageButton.setAttribute("aria-label", buildGalleryAriaLabel(item, lang));
+
+    const media = document.createElement("div");
+    media.className = "gallery-image-media";
+    media.appendChild(createPicture(item, lang));
+    imageButton.appendChild(media);
+
+    if (item.captionKey) {
+      const caption = document.createElement("p");
+      caption.className = "portfolio-front-caption";
+      caption.textContent = t(item.captionKey, lang);
+      imageButton.appendChild(caption);
+    }
+
+    imageButton.addEventListener("click", () => {
+      openImageLightbox(item, lang, imageButton);
+    });
+
+    figure.appendChild(imageButton);
+    return figure;
+  }
+
+  function createImageLightbox() {
+    const root = document.createElement("div");
+    root.className = "image-lightbox";
+    root.hidden = true;
+    root.setAttribute("aria-hidden", "true");
+
+    const frame = document.createElement("figure");
+    frame.className = "image-lightbox-frame";
+    frame.setAttribute("role", "dialog");
+    frame.setAttribute("aria-modal", "true");
+
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.className = "image-lightbox-close";
+
+    const closeLabel = document.createElement("span");
+    closeLabel.className = "sr-only";
+
+    const closeGlyph = document.createElement("span");
+    closeGlyph.textContent = "x";
+    closeGlyph.setAttribute("aria-hidden", "true");
+
+    closeButton.appendChild(closeLabel);
+    closeButton.appendChild(closeGlyph);
+
+    const picture = document.createElement("picture");
+    picture.className = "image-lightbox-media";
+
+    const source = document.createElement("source");
+    source.type = "image/webp";
+
+    const image = document.createElement("img");
+    image.decoding = "async";
+
+    picture.appendChild(source);
+    picture.appendChild(image);
+
+    const caption = document.createElement("figcaption");
+    caption.className = "image-lightbox-caption";
+
+    frame.appendChild(closeButton);
+    frame.appendChild(picture);
+    frame.appendChild(caption);
+    root.appendChild(frame);
+    document.body.appendChild(root);
+
+    closeButton.addEventListener("click", () => {
+      closeImageLightbox();
+    });
+
+    root.addEventListener("click", (event) => {
+      if (event.target === root) {
+        closeImageLightbox();
+      }
+    });
+
+    return {
+      root,
+      frame,
+      closeButton,
+      closeLabel,
+      source,
+      image,
+      caption,
+      activeItem: null,
+      trigger: null
+    };
+  }
+
+  function isImageLightboxOpen() {
+    return !!(lightbox && !lightbox.root.hidden);
+  }
+
+  function updateLightboxText(lang) {
+    if (!lightbox) {
+      return;
+    }
+
+    lightbox.closeLabel.textContent = t("ui.closeImageView", lang);
+    lightbox.frame.setAttribute("aria-label", t("ui.imageDialogLabel", lang));
+
+    if (!lightbox.activeItem) {
+      return;
+    }
+
+    const alt =
+      lightbox.activeItem.alt[lang] ||
+      lightbox.activeItem.alt[fallbackLang] ||
+      t("ui.flipItemLabel", lang);
+
+    lightbox.image.alt = alt;
+    lightbox.caption.textContent = lightbox.activeItem.captionKey ? t(lightbox.activeItem.captionKey, lang) : alt;
+  }
+
+  function openImageLightbox(item, lang, trigger = null) {
+    if (!lightbox) {
+      return;
+    }
+
+    lightbox.activeItem = item;
+    lightbox.trigger = trigger;
+
+    lightbox.source.srcset = `${item.srcBase}.webp`;
+    lightbox.image.src = `${item.srcBase}.jpg`;
+
+    updateLightboxText(lang);
+
+    lightbox.root.hidden = false;
+    lightbox.root.classList.add("is-open");
+    lightbox.root.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+    lightbox.closeButton.focus();
+  }
+
+  function closeImageLightbox(restoreFocus = true) {
+    if (!isImageLightboxOpen()) {
+      return;
+    }
+
+    lightbox.root.classList.remove("is-open");
+    lightbox.root.hidden = true;
+    lightbox.root.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+
+    if (restoreFocus && lightbox.trigger && document.contains(lightbox.trigger)) {
+      lightbox.trigger.focus();
+    }
+
+    lightbox.activeItem = null;
+    lightbox.trigger = null;
+  }
+
   function renderFeatured(lang) {
     const featuredItems = portfolioItems.filter((item) => item.featured);
     featuredGrid.innerHTML = "";
 
     featuredItems.forEach((item, index) => {
-      const figure = document.createElement("figure");
-      figure.className = "feature-card reveal";
-      figure.style.transitionDelay = isReducedMotion() ? "0ms" : `${Math.min(index * 70, 350)}ms`;
-
-      const pic = createPicture(item, lang);
-      figure.appendChild(pic);
-
-      const caption = document.createElement("figcaption");
-      caption.textContent = item.captionKey ? t(item.captionKey, lang) : "";
-      figure.appendChild(caption);
-
-      featuredGrid.appendChild(figure);
+      const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min(index * 70, 350)}ms`;
+      const card = createFlippableCard(item, lang, "feature-card", transitionDelay, index < 2);
+      featuredGrid.appendChild(card);
     });
   }
 
@@ -147,20 +400,9 @@
     galleryGrid.innerHTML = "";
 
     portfolioItems.forEach((item, index) => {
-      const figure = document.createElement("figure");
-      figure.className = "gallery-card reveal";
-      figure.style.transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
-
-      const pic = createPicture(item, lang);
-      figure.appendChild(pic);
-
-      if (item.captionKey) {
-        const caption = document.createElement("figcaption");
-        caption.textContent = t(item.captionKey, lang);
-        figure.appendChild(caption);
-      }
-
-      galleryGrid.appendChild(figure);
+      const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
+      const card = createGalleryCard(item, lang, transitionDelay);
+      galleryGrid.appendChild(card);
     });
   }
 
@@ -228,6 +470,8 @@
   }
 
   function applyLanguage(lang) {
+    closeImageLightbox(false);
+
     state.lang = lang;
     localStorage.setItem(storageKey, lang);
 
@@ -238,7 +482,7 @@
     renderGallery(lang);
 
     const subject = lang === "no" ? "Fortellerhenvendelse" : "Storytelling Inquiry";
-    contactEmail.href = `mailto:neha.account@gmail.com?subject=${encodeURIComponent(subject)}`;
+    contactEmail.href = `mailto:catwith9tales@gmail.com?subject=${encodeURIComponent(subject)}`;
 
     refreshObservers();
   }
@@ -260,6 +504,12 @@
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
+        if (isImageLightboxOpen()) {
+          event.preventDefault();
+          closeImageLightbox();
+          return;
+        }
+
         closeMenu();
       }
     });
@@ -291,6 +541,7 @@
     });
   }
 
+  lightbox = createImageLightbox();
   initializeMenu();
   initializeLanguageButtons();
   applyLanguage(state.lang);
