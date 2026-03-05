@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cat With 9 Tales</title>
+    <meta
+      name="description"
+      content="Cat With 9 Tales is the storytelling portfolio of Neha Verma, an Indian-Norwegian storyteller weaving bridges between cultures."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/content.js"></script>
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="ui.skipToContent">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Cat With 9 Tales home">
+          <span class="brand-title" data-i18n="hero.title">Cat With 9 Tales</span>
+          <span class="brand-sub" data-i18n="hero.identityShort">Indian-Norwegian storyteller</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          data-menu-toggle
+        >
+          <span class="sr-only" data-i18n="ui.toggleMenu">Toggle menu</span>
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+          <span class="menu-toggle-line"></span>
+        </button>
+
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#home" data-section-link="home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-section-link="about" data-i18n="nav.about">About</a></li>
+            <li><a href="#portfolio" data-section-link="portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+            <li><a href="#contact" data-section-link="contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="lang-switch" role="group" aria-label="Language switch">
+          <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+          <button type="button" class="lang-btn" data-lang-btn="no" aria-pressed="false">NO</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="home" data-section="home">
+        <div class="hero-media" aria-hidden="true">
+          <picture>
+            <source srcset="assets/images/optimized/neha-verma.webp" type="image/webp">
+            <img
+              src="assets/images/optimized/neha-verma.jpg"
+              alt=""
+              width="2200"
+              height="1586"
+              loading="eager"
+              fetchpriority="high"
+            >
+          </picture>
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-content reveal">
+          <p class="hero-kicker" data-i18n="hero.kicker">Storytelling Portfolio</p>
+          <h1 data-i18n="hero.title">Cat With 9 Tales</h1>
+          <ul class="hero-mantra" aria-label="Core themes">
+            <li data-i18n="hero.mantra1">9 Lives</li>
+            <li data-i18n="hero.mantra2">9 Lenses</li>
+            <li data-i18n="hero.mantra3">9 Tales</li>
+          </ul>
+          <p class="hero-intro" data-i18n="hero.identity">I am an Indian-Norwegian storyteller.</p>
+          <a class="button-primary" href="#contact" data-i18n="hero.cta">Begin the conversation</a>
+        </div>
+      </section>
+
+      <section class="about section" id="about" data-section="about">
+        <div class="container text-column reveal">
+          <p class="section-eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 data-i18n="about.heading">Stories that build bridges</h2>
+          <div class="about-copy" id="about-copy"></div>
+          <p class="about-signoff" data-i18n="about.signoff">Shall we try together?</p>
+        </div>
+      </section>
+
+      <section class="portfolio section" id="portfolio" data-section="portfolio">
+        <div class="container">
+          <div class="reveal">
+            <p class="section-eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
+            <h2 data-i18n="portfolio.heading">A glimpse through nine lenses</h2>
+            <p class="section-intro" data-i18n="portfolio.intro">
+              Curated moments from performances, reflections, and journeys.
+            </p>
+          </div>
+
+          <div class="featured-grid" id="featured-grid" aria-live="polite"></div>
+
+          <div class="gallery-head reveal">
+            <h3 data-i18n="portfolio.galleryHeading">Full photo archive</h3>
+            <p data-i18n="portfolio.galleryIntro">
+              Every frame in this collection sits inside a living body of story.
+            </p>
+          </div>
+
+          <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" data-section="contact">
+        <div class="container contact-inner reveal">
+          <p class="section-eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.heading">Let us build one bridge, one story at a time.</h2>
+          <p data-i18n="contact.body">
+            For performances, workshops, speaking invitations, or collaborations, write directly.
+          </p>
+          <a
+            id="contact-email"
+            class="contact-link"
+            href="mailto:neha.account@gmail.com?subject=Storytelling%20Inquiry"
+          >
+            neha.account@gmail.com
+          </a>
+          <p class="contact-closing" data-i18n="contact.closing">I begin where I stand. Shall we try together?</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p data-i18n="footer.line">Cat With 9 Tales · Neha Verma</p>
+      </div>
+    </footer>
+  </body>
+</html>
