@@ -43,11 +43,11 @@
         signoff: "Shall we try together?",
         paragraphs: [
           "Born in India, a culture steeped in rich and flowing story waters, I was raised loving tales and weaving generational yarns.",
-          "Generations of my elders have been traditional Indian storytellers and space-holding seekers of truth. They shared old folk tales and ancient myths, weaving them with present realities to offer refined perspectives for everyday life.\nI grew up with mythologies that never lost their link with the present and always reached toward the future. That is why I feel at home in the spaces that flow between worlds.",
-          "Steeped in culture at the School of Life in India, and later educated at the School of Storytelling in England, I carry forward into my practice the glowing torch of a generational lineage of stories that flow in my blood and are settled in my bones.",
+          "Generations of my elders have been traditional Indian storytellers and space-holding \"seekers of truth\". They shared old folk tales and ancient myths, weaving them with present realities to offer refined perspectives for everyday life.\nI grew up with mythologies that never lost their link with the present and always reached toward the future. I carry forward into my practice the glowing torch of a generational lineage of stories that flow in my blood and are settled in my bones.",
+          "Having been steeped in eastern culture studying at the School of Life in India, I have also been trained in edible arts at Le Cordon Bleu Paris, France. Furthered my training in Multimedia edible art and design at the atelier of Colette Peters in Greenwich village Manhattan, NYC and strengthened my education at the School of Storytelling in England, UK\nApart from this I have experimentally dabbled in Dance, Butoh, Clowning and amateur theatre.\nThe blend of east and west in my education and training it enables me to feel at home in different world and the spaces that flow in between.",
           "As an Indian-Norwegian, who now finds herself \"West of the Sun and East of the moon\" questions of belonging and identity and a searching for inner deeper traveling roots have become deeply personal quests.\nThe seeking itself gives me the colors and threads with which I now weave my own stories.",
           "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever like essential bridge building.",
-          "How does one build a bridge for stories to travel between icy pine-lined fjords and steamy jungle-fringed monsoon rivers?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
+          "How does one build a bridge?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
         ]
       },
       portfolio: {
