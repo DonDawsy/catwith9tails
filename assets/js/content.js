@@ -39,12 +39,11 @@
         signoff: "Shall we try together?",
         paragraphs: [
           "Born in India, a culture steeped in rich and flowing story waters, I was raised loving tales and weaving generational yarns.",
-          "In my family, elders were traditional Indian space-holding seekers of truth. They shared old folk tales and ancient myths, weaving them with present realities to offer refined perspectives for everyday life.",
-          "I grew up with mythologies that never lost their link with the present and always reached toward the future. That is why I feel at home in the spaces that flow between worlds.",
-          "Steeped in culture at the School of Life in India, and later educated at the School of Storytelling in England, I carry forward a third-generation lineage of stories in blood, bone, and practice.",
-          "As an Indian-Norwegian, questions of belonging and identity, searching for roots, and building bridges between East and West have become deeply personal quests. The seeking itself gives me the colors and threads with which I now weave my own stories.",
-          "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever.",
-          "How does one build a bridge?\n\nBegin with one step.\nOne bend of the river.\nOne stone at a time.\nI Begin where I stand."
+          "Generations of my elders have been traditional Indian storytellers and space-holding seekers of truth. They shared old folk tales and ancient myths, weaving them with present realities to offer refined perspectives for everyday life.\nI grew up with mythologies that never lost their link with the present and always reached toward the future. That is why I feel at home in the spaces that flow between worlds.",
+          "Steeped in culture at the School of Life in India, and later educated at the School of Storytelling in England, I carry forward into my practice the glowing torch of a generational lineage of stories that flow in my blood and are settled in my bones.",
+          "As an Indian-Norwegian, who now finds herself \"West of the Sun and East of the moon\" questions of belonging and identity and a searching for inner deeper traveling roots have become deeply personal quests.\nThe seeking itself gives me the colors and threads with which I now weave my own stories.",
+          "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever like essential bridge building.",
+          "How does one build a bridge?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
         ]
       },
       portfolio: {
