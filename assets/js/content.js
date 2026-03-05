@@ -42,12 +42,15 @@
         heading: "Stories that build bridges",
         signoff: "Shall we try together?",
         paragraphs: [
-          "Born in India, a culture steeped in rich and flowing story waters, I was raised loving tales and weaving generational yarns.",
-          "Generations of my elders have been traditional Indian storytellers and space-holding \"seekers of truth\". They shared old folk tales and ancient myths, weaving them with present realities to offer refined perspectives for everyday life.\nI grew up with mythologies that never lost their link with the present and always reached toward the future. I carry forward into my practice the glowing torch of a generational lineage of stories that flow in my blood and are settled in my bones.",
-          "Having been steeped in eastern culture studying at the School of Life in India, I have also been trained in edible arts at Le Cordon Bleu Paris, France. Furthered my training in Multimedia edible art and design at the atelier of Colette Peters in Greenwich village Manhattan, NYC and strengthened my education at the School of Storytelling in England, UK\nApart from this I have experimentally dabbled in Dance, Butoh, Clowning and amateur theatre.\nThe blend of east and west in my education and training it enables me to feel at home in different world and the spaces that flow in between.",
-          "As an Indian-Norwegian, who now finds herself \"West of the Sun and East of the moon\" questions of belonging and identity and a searching for inner deeper traveling roots have become deeply personal quests.\nThe seeking itself gives me the colors and threads with which I now weave my own stories.",
-          "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever like essential bridge building.",
-          "How does one build a bridge?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
+          "Born in India, a culture steeped in rich and flowing story waters, I grew up loving tales and listening to the generational yarns of my elders.",
+          "In my family, storytelling was closely woven with a tradition of inquiry and truth-seeking. Folk tales and ancient myths were never relics of the past; they were living companions, woven with present realities to offer perspective for everyday life. From them I inherited a glowing torch of a generational lineage of stories that flow in my blood and are settled in the bones.",
+          "From them I inherited a quiet inheritance: the glowing torch of stories that flow in the blood and settle into the bones.",
+          "My education has carried me across different worlds. I studied at the School of Life in India and later trained in the edible arts at Le Cordon Bleu in Paris. I continued exploring multimedia edible design at the atelier of Colette Peters in Greenwich Village, New York, and deepened my storytelling practice at the School of Storytelling in England.",
+          "The blend of Eastern and Western traditions in my life and training allows me to feel at home in different cultural landscapes and in the spaces that flow between them.",
+          "Now living in Norway, I find myself quite literally West of the Sun and East of the Moon. Questions of belonging and traveling roots have become personal quests, and the seeking itself gives me the threads with which I now weave my own stories.",
+          "In a world where separation can pull us apart, the work of building bridges feels more essential than ever.",
+          "One step.\nOne bend of the river.\nOne stone at a time.",
+          "I begin where I stand."
         ]
       },
       portfolio: {
@@ -129,12 +132,15 @@
         heading: "Fortellinger som bygger broer",
         signoff: "Skal vi prøve sammen?",
         paragraphs: [
-          "Født i India, i en kultur gjennomsyret av rike og flytende fortellerstrømmer, vokste jeg opp med kjærlighet til fortellinger og med å veve tråder mellom generasjoner.",
-          "Generasjoner av mine eldre har vært tradisjonelle indiske fortellere og sannhetssøkere som holder rom for andre. De delte gamle folkeeventyr og urgamle myter, og vevde dem sammen med samtidens virkelighet for å gi nyanserte perspektiver på hverdagslivet.\nJeg vokste opp med mytologier som aldri mistet forbindelsen til nåtiden, og som alltid strakte seg mot fremtiden. Derfor kjenner jeg meg hjemme i rommene som flyter mellom verdener.",
-          "Formet av kultur ved Livets skole i India, og senere utdannet ved School of Storytelling i England, bærer jeg videre i praksisen min den glødende fakkelen fra en generasjonell fortellerlinje som flyter i blodet mitt og sitter i knoklene.",
-          "Som indisk-norsk, og nå plassert «vest for solen og øst for månen», har spørsmål om tilhørighet, identitet og søken etter dypere vandrende røtter blitt dypt personlige reiser.\nSelve søken gir meg fargene og trådene jeg nå vever mine egne fortellinger med.",
-          "I en stadig mer kaotisk verden, der avstand og annerledeshet kan rive oss fra hverandre, kjennes ønsket om å bygge broer mer presserende enn noen gang før, som helt nødvendig brobygging.",
-          "Hvordan bygger man en bro som lar fortellinger reise mellom iskalde, furukledde fjorder og dampende monsunelver kantet av jungel?\nEtt steg.\nEn sving i elven.\nEn stein av gangen.\n\nJeg begynner der jeg står."
+          "Født i India, i en kultur gjennomsyret av rike og flytende fortellerstrømmer, vokste jeg opp med kjærlighet til fortellinger og med å lytte til de generasjonelle fortellingene fra mine eldre.",
+          "I familien min var fortelling tett vevd sammen med en tradisjon for undersøkelse og sannhetssøken. Folkeeventyr og urgamle myter var aldri levninger fra fortiden; de var levende følgesvenner, vevd sammen med nåtidens virkelighet for å gi perspektiv til hverdagslivet. Fra dem arvet jeg en glødende fakkel fra en generasjonell fortellerlinje som flyter i blodet mitt og sitter i knoklene.",
+          "Fra dem arvet jeg en stille arv: den glødende fakkelen av fortellinger som flyter i blodet og setter seg i knoklene.",
+          "Utdanningen min har ført meg gjennom ulike verdener. Jeg studerte ved School of Life i India og senere i edible arts ved Le Cordon Bleu i Paris. Jeg fortsatte å utforske multimedia edible design ved atelieret til Colette Peters i Greenwich Village i New York, og fordypet fortellerpraksisen min ved School of Storytelling i England.",
+          "Blandingen av østlige og vestlige tradisjoner i livet og utdanningen min gjør at jeg føler meg hjemme i ulike kulturelle landskap og i rommene som flyter mellom dem.",
+          "Nå som jeg bor i Norge, befinner jeg meg helt bokstavelig vest for solen og øst for månen. Spørsmål om tilhørighet og vandrende røtter har blitt personlige søken, og selve søken gir meg trådene jeg nå vever mine egne fortellinger med.",
+          "I en verden der separasjon kan rive oss fra hverandre, kjennes arbeidet med å bygge broer mer nødvendig enn noen gang.",
+          "Ett steg.\nEn sving i elven.\nEn stein av gangen.",
+          "Jeg begynner der jeg står."
         ]
       },
       portfolio: {
