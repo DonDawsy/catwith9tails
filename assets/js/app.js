@@ -123,23 +123,105 @@
     return picture;
   }
 
+  function getBacksideContent(item, lang) {
+    const fallbackBackside = item.backside && item.backside[fallbackLang] ? item.backside[fallbackLang] : {};
+    const localBackside = item.backside && item.backside[lang] ? item.backside[lang] : fallbackBackside;
+
+    return {
+      subtitle: localBackside.subtitle || fallbackBackside.subtitle || "",
+      text:
+        localBackside.text ||
+        fallbackBackside.text ||
+        item.alt[lang] ||
+        item.alt[fallbackLang] ||
+        t("ui.flipFallbackText", lang)
+    };
+  }
+
+  function buildFlipAriaLabel(item, lang, isFlipped) {
+    const actionLabel = isFlipped ? t("ui.flipToFront", lang) : t("ui.flipToBack", lang);
+    const itemLabel = item.alt[lang] || item.alt[fallbackLang] || t("ui.flipItemLabel", lang);
+    return `${actionLabel}: ${itemLabel}`;
+  }
+
+  function setCardFlipState(button, item, lang, shouldFlip) {
+    button.classList.toggle("is-flipped", shouldFlip);
+    button.setAttribute("aria-pressed", String(shouldFlip));
+    button.setAttribute("aria-label", buildFlipAriaLabel(item, lang, shouldFlip));
+  }
+
+  function createFlippableCard(item, lang, cardClassName, transitionDelay, eager = false) {
+    const figure = document.createElement("figure");
+    figure.className = `${cardClassName} reveal`;
+    figure.style.transitionDelay = transitionDelay;
+
+    const flipButton = document.createElement("button");
+    flipButton.type = "button";
+    flipButton.className = "portfolio-flip";
+    setCardFlipState(flipButton, item, lang, false);
+
+    const flipInner = document.createElement("div");
+    flipInner.className = "portfolio-flip-inner";
+
+    const frontFace = document.createElement("div");
+    frontFace.className = "portfolio-flip-face portfolio-flip-front";
+
+    const frontMedia = document.createElement("div");
+    frontMedia.className = "portfolio-flip-media";
+    frontMedia.appendChild(createPicture(item, lang, eager));
+    frontFace.appendChild(frontMedia);
+
+    if (item.captionKey) {
+      const frontCaption = document.createElement("p");
+      frontCaption.className = "portfolio-front-caption";
+      frontCaption.textContent = t(item.captionKey, lang);
+      frontFace.appendChild(frontCaption);
+    }
+
+    const backFace = document.createElement("div");
+    backFace.className = "portfolio-flip-face portfolio-flip-back";
+    const backside = getBacksideContent(item, lang);
+
+    if (backside.subtitle) {
+      const backSubtitle = document.createElement("p");
+      backSubtitle.className = "portfolio-back-subtitle";
+      backSubtitle.textContent = backside.subtitle;
+      backFace.appendChild(backSubtitle);
+    }
+
+    const backText = document.createElement("p");
+    backText.className = "portfolio-back-text";
+    backText.textContent = backside.text;
+    backFace.appendChild(backText);
+
+    flipInner.appendChild(frontFace);
+    flipInner.appendChild(backFace);
+    flipButton.appendChild(flipInner);
+    figure.appendChild(flipButton);
+
+    flipButton.addEventListener("click", () => {
+      const nextFlippedState = !flipButton.classList.contains("is-flipped");
+      setCardFlipState(flipButton, item, lang, nextFlippedState);
+    });
+
+    flipButton.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && flipButton.classList.contains("is-flipped")) {
+        event.preventDefault();
+        setCardFlipState(flipButton, item, lang, false);
+      }
+    });
+
+    return figure;
+  }
+
   function renderFeatured(lang) {
     const featuredItems = portfolioItems.filter((item) => item.featured);
     featuredGrid.innerHTML = "";
 
     featuredItems.forEach((item, index) => {
-      const figure = document.createElement("figure");
-      figure.className = "feature-card reveal";
-      figure.style.transitionDelay = isReducedMotion() ? "0ms" : `${Math.min(index * 70, 350)}ms`;
-
-      const pic = createPicture(item, lang);
-      figure.appendChild(pic);
-
-      const caption = document.createElement("figcaption");
-      caption.textContent = item.captionKey ? t(item.captionKey, lang) : "";
-      figure.appendChild(caption);
-
-      featuredGrid.appendChild(figure);
+      const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min(index * 70, 350)}ms`;
+      const card = createFlippableCard(item, lang, "feature-card", transitionDelay, index < 2);
+      featuredGrid.appendChild(card);
     });
   }
 
@@ -147,20 +229,9 @@
     galleryGrid.innerHTML = "";
 
     portfolioItems.forEach((item, index) => {
-      const figure = document.createElement("figure");
-      figure.className = "gallery-card reveal";
-      figure.style.transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
-
-      const pic = createPicture(item, lang);
-      figure.appendChild(pic);
-
-      if (item.captionKey) {
-        const caption = document.createElement("figcaption");
-        caption.textContent = t(item.captionKey, lang);
-        figure.appendChild(caption);
-      }
-
-      galleryGrid.appendChild(figure);
+      const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
+      const card = createFlippableCard(item, lang, "gallery-card", transitionDelay);
+      galleryGrid.appendChild(card);
     });
   }
 

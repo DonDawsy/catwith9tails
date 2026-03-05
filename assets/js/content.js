@@ -8,7 +8,11 @@
       },
       ui: {
         skipToContent: "Skip to content",
-        toggleMenu: "Toggle menu"
+        toggleMenu: "Toggle menu",
+        flipToBack: "Show story text",
+        flipToFront: "Show image",
+        flipItemLabel: "Portfolio image",
+        flipFallbackText: "Story details coming soon."
       },
       nav: {
         home: "Home",
@@ -73,7 +77,11 @@
       },
       ui: {
         skipToContent: "Hopp til innhold",
-        toggleMenu: "Åpne eller lukk meny"
+        toggleMenu: "Åpne eller lukk meny",
+        flipToBack: "Vis fortellertekst",
+        flipToFront: "Vis bilde",
+        flipItemLabel: "Porteføljebilde",
+        flipFallbackText: "Historietekst kommer snart."
       },
       nav: {
         home: "Hjem",
@@ -132,6 +140,7 @@
     }
   };
 
+  // Update subtitle/text for any image directly in each item's `backside` object.
   const portfolioItems = [
     {
       id: "neha-verma",
@@ -143,6 +152,16 @@
       alt: {
         en: "Portrait of storyteller Neha Verma against warm stage light.",
         no: "Portrett av fortelleren Neha Verma i varmt scenelys."
+      },
+      backside: {
+        en: {
+          subtitle: "Voice of Many Rivers",
+          text: "A portrait rooted in Indian-Norwegian identity, holding memory, movement, and bridge-building in one frame."
+        },
+        no: {
+          subtitle: "Stemmen fra mange elver",
+          text: "Et portrett forankret i indisk-norsk identitet, der minne, bevegelse og brobygging møtes i ett bilde."
+        }
       }
     },
     {
@@ -155,6 +174,16 @@
       alt: {
         en: "Storytelling portrait from a live performance setting.",
         no: "Fortellerportrett fra en levende fremføringssituasjon."
+      },
+      backside: {
+        en: {
+          subtitle: "Living Story Circle",
+          text: "An onstage moment where inherited stories are retold for the present audience."
+        },
+        no: {
+          subtitle: "Levende fortellersirkel",
+          text: "Et scenisk øyeblikk der nedarvede fortellinger fortelles på nytt for publikum her og nå."
+        }
       }
     },
     {
@@ -167,6 +196,16 @@
       alt: {
         en: "Artwork and title image for The Journeys of All My Mothers.",
         no: "Illustrasjon og tittelbilde for The Journeys of All My Mothers."
+      },
+      backside: {
+        en: {
+          subtitle: "Generational Journey",
+          text: "A visual doorway into ancestral stories carried by women across time, borders, and language."
+        },
+        no: {
+          subtitle: "Generasjonsreise",
+          text: "En visuell inngang til forfedrenes fortellinger båret av kvinner på tvers av tid, grenser og språk."
+        }
       }
     },
     {
@@ -179,6 +218,16 @@
       alt: {
         en: "Storytelling event setting at Tomter community library.",
         no: "Fortellersetting ved Tomter innbyggertorg og bibliotek."
+      },
+      backside: {
+        en: {
+          subtitle: "Community Room",
+          text: "Stories unfold in shared civic spaces where strangers gather and leave as listeners to one another."
+        },
+        no: {
+          subtitle: "Fellesrom",
+          text: "Fortellinger utspiller seg i felles møteplasser der fremmede samles og går videre som lyttende medmennesker."
+        }
       }
     },
     {
@@ -191,6 +240,16 @@
       alt: {
         en: "Atmospheric portrait from a storytelling session in warm tones.",
         no: "Stemningsfullt portrett fra en fortellerstund i varme toner."
+      },
+      backside: {
+        en: {
+          subtitle: "Candlelit Attention",
+          text: "Warm light slows the room down and invites careful listening to each unfolding sentence."
+        },
+        no: {
+          subtitle: "Lys og nærvær",
+          text: "Det varme lyset senker tempoet i rommet og inviterer til oppmerksom lytting til hver setning."
+        }
       }
     },
     {
@@ -203,6 +262,16 @@
       alt: {
         en: "Documentary scene with listeners gathered during a cultural event.",
         no: "Dokumentarisk scene med publikum samlet under et kulturarrangement."
+      },
+      backside: {
+        en: {
+          subtitle: "Shared Listening",
+          text: "A documentary glimpse of collective attention, where the audience becomes part of the story."
+        },
+        no: {
+          subtitle: "Felles lytting",
+          text: "Et dokumentarisk glimt av felles oppmerksomhet, der publikum blir en del av fortellingen."
+        }
       }
     },
     {
@@ -215,6 +284,16 @@
       alt: {
         en: "Portrait photograph from Neha Verma's storytelling archive.",
         no: "Portrettfoto fra Neha Vermas fortellerarkiv."
+      },
+      backside: {
+        en: {
+          subtitle: "Archive Portrait I",
+          text: "Portrait photograph from Neha Verma's storytelling archive."
+        },
+        no: {
+          subtitle: "Arkivportrett I",
+          text: "Portrettfoto fra Neha Vermas fortellerarkiv."
+        }
       }
     },
     {
@@ -227,6 +306,16 @@
       alt: {
         en: "Performance image from a reflective storytelling evening.",
         no: "Fremføringsbilde fra en reflekterende fortellerkveld."
+      },
+      backside: {
+        en: {
+          subtitle: "Archive Portrait II",
+          text: "Performance image from a reflective storytelling evening."
+        },
+        no: {
+          subtitle: "Arkivportrett II",
+          text: "Fremføringsbilde fra en reflekterende fortellerkveld."
+        }
       }
     },
     {
@@ -239,6 +328,16 @@
       alt: {
         en: "Story portrait with layered textures and warm light.",
         no: "Fortellerportrett med lag av teksturer og varmt lys."
+      },
+      backside: {
+        en: {
+          subtitle: "Archive Portrait III",
+          text: "Story portrait with layered textures and warm light."
+        },
+        no: {
+          subtitle: "Arkivportrett III",
+          text: "Fortellerportrett med lag av teksturer og varmt lys."
+        }
       }
     },
     {
@@ -251,6 +350,16 @@
       alt: {
         en: "Wide scene from a storytelling gathering.",
         no: "Bred scene fra en fortellersamling."
+      },
+      backside: {
+        en: {
+          subtitle: "Wide Gathering",
+          text: "Wide scene from a storytelling gathering."
+        },
+        no: {
+          subtitle: "Bred samling",
+          text: "Bred scene fra en fortellersamling."
+        }
       }
     },
     {
@@ -263,6 +372,16 @@
       alt: {
         en: "Landscape-oriented photograph from a performance space.",
         no: "Landskapsorientert foto fra et fremføringsrom."
+      },
+      backside: {
+        en: {
+          subtitle: "Performance Space",
+          text: "Landscape-oriented photograph from a performance space."
+        },
+        no: {
+          subtitle: "Fremføringsrom",
+          text: "Landskapsorientert foto fra et fremføringsrom."
+        }
       }
     },
     {
@@ -275,6 +394,16 @@
       alt: {
         en: "Documentary photo from Neha Verma's creative journey.",
         no: "Dokumentarfoto fra Neha Vermas kreative reise."
+      },
+      backside: {
+        en: {
+          subtitle: "Creative Journey",
+          text: "Documentary photo from Neha Verma's creative journey."
+        },
+        no: {
+          subtitle: "Kreativ reise",
+          text: "Dokumentarfoto fra Neha Vermas kreative reise."
+        }
       }
     },
     {
@@ -287,6 +416,16 @@
       alt: {
         en: "Vertical frame from a storytelling rehearsal moment.",
         no: "Vertikalt utsnitt fra et øyeblikk i fortellerøvelse."
+      },
+      backside: {
+        en: {
+          subtitle: "Rehearsal Moment",
+          text: "Vertical frame from a storytelling rehearsal moment."
+        },
+        no: {
+          subtitle: "Øvingsøyeblikk",
+          text: "Vertikalt utsnitt fra et øyeblikk i fortellerøvelse."
+        }
       }
     },
     {
@@ -299,6 +438,16 @@
       alt: {
         en: "Panoramic detail from a performance environment.",
         no: "Panoramisk detalj fra et fremføringsmiljø."
+      },
+      backside: {
+        en: {
+          subtitle: "Panoramic Stage",
+          text: "Panoramic detail from a performance environment."
+        },
+        no: {
+          subtitle: "Panoramascene",
+          text: "Panoramisk detalj fra et fremføringsmiljø."
+        }
       }
     },
     {
@@ -311,6 +460,16 @@
       alt: {
         en: "Panoramic still from a storytelling venue.",
         no: "Panoramisk stillbilde fra en fortellerarena."
+      },
+      backside: {
+        en: {
+          subtitle: "Venue Atmosphere",
+          text: "Panoramic still from a storytelling venue."
+        },
+        no: {
+          subtitle: "Arenaens stemning",
+          text: "Panoramisk stillbilde fra en fortellerarena."
+        }
       }
     },
     {
@@ -323,6 +482,16 @@
       alt: {
         en: "Wide composition showing atmosphere around a storytelling event.",
         no: "Bred komposisjon som viser stemningen rundt et fortellerarrangement."
+      },
+      backside: {
+        en: {
+          subtitle: "Event Atmosphere",
+          text: "Wide composition showing atmosphere around a storytelling event."
+        },
+        no: {
+          subtitle: "Arrangementets stemning",
+          text: "Bred komposisjon som viser stemningen rundt et fortellerarrangement."
+        }
       }
     },
     {
@@ -335,6 +504,16 @@
       alt: {
         en: "Environmental image from a staged storytelling context.",
         no: "Miljøbilde fra en iscenesatt fortellerkontekst."
+      },
+      backside: {
+        en: {
+          subtitle: "Staged Context",
+          text: "Environmental image from a staged storytelling context."
+        },
+        no: {
+          subtitle: "Iscenesatt kontekst",
+          text: "Miljøbilde fra en iscenesatt fortellerkontekst."
+        }
       }
     },
     {
@@ -347,6 +526,16 @@
       alt: {
         en: "Performance still from Neha Verma's portfolio.",
         no: "Fremføringsstill fra Neha Vermas portefølje."
+      },
+      backside: {
+        en: {
+          subtitle: "Performance Still",
+          text: "Performance still from Neha Verma's portfolio."
+        },
+        no: {
+          subtitle: "Fremføringsstill",
+          text: "Fremføringsstill fra Neha Vermas portefølje."
+        }
       }
     },
     {
@@ -359,6 +548,16 @@
       alt: {
         en: "Horizontal storytelling scene with layered texture.",
         no: "Horisontal fortellerscene med lagdelt tekstur."
+      },
+      backside: {
+        en: {
+          subtitle: "Layered Scene",
+          text: "Horizontal storytelling scene with layered texture."
+        },
+        no: {
+          subtitle: "Lagdelt scene",
+          text: "Horisontal fortellerscene med lagdelt tekstur."
+        }
       }
     },
     {
@@ -371,6 +570,16 @@
       alt: {
         en: "Venue detail image from a cultural storytelling program.",
         no: "Detaljbilde fra et kulturelt fortellerprogram."
+      },
+      backside: {
+        en: {
+          subtitle: "Cultural Detail",
+          text: "Venue detail image from a cultural storytelling program."
+        },
+        no: {
+          subtitle: "Kulturell detalj",
+          text: "Detaljbilde fra et kulturelt fortellerprogram."
+        }
       }
     },
     {
@@ -383,6 +592,16 @@
       alt: {
         en: "Vertical portrait from a live storytelling evening.",
         no: "Vertikalt portrett fra en levende fortellerkveld."
+      },
+      backside: {
+        en: {
+          subtitle: "Vertical Evening",
+          text: "Vertical portrait from a live storytelling evening."
+        },
+        no: {
+          subtitle: "Vertikal kveld",
+          text: "Vertikalt portrett fra en levende fortellerkveld."
+        }
       }
     },
     {
@@ -395,6 +614,16 @@
       alt: {
         en: "Tall composition capturing movement in performance.",
         no: "Høy komposisjon som fanger bevegelse i fremføring."
+      },
+      backside: {
+        en: {
+          subtitle: "Movement Frame",
+          text: "Tall composition capturing movement in performance."
+        },
+        no: {
+          subtitle: "Bevegelsesutsnitt",
+          text: "Høy komposisjon som fanger bevegelse i fremføring."
+        }
       }
     },
     {
@@ -407,6 +636,16 @@
       alt: {
         en: "Portrait-oriented performance frame with dramatic contrast.",
         no: "Portrettorientert fremføringsramme med dramatisk kontrast."
+      },
+      backside: {
+        en: {
+          subtitle: "Dramatic Contrast",
+          text: "Portrait-oriented performance frame with dramatic contrast."
+        },
+        no: {
+          subtitle: "Dramatisk kontrast",
+          text: "Portrettorientert fremføringsramme med dramatisk kontrast."
+        }
       }
     },
     {
@@ -419,6 +658,16 @@
       alt: {
         en: "Vertical frame documenting a storytelling sequence.",
         no: "Vertikalt utsnitt som dokumenterer en fortellersekvens."
+      },
+      backside: {
+        en: {
+          subtitle: "Story Sequence",
+          text: "Vertical frame documenting a storytelling sequence."
+        },
+        no: {
+          subtitle: "Fortellersekvens",
+          text: "Vertikalt utsnitt som dokumenterer en fortellersekvens."
+        }
       }
     },
     {
@@ -431,6 +680,16 @@
       alt: {
         en: "Portrait frame from a contemplative narrative moment.",
         no: "Portrettutsnitt fra et kontemplativt fortellerøyeblikk."
+      },
+      backside: {
+        en: {
+          subtitle: "Contemplative Moment",
+          text: "Portrait frame from a contemplative narrative moment."
+        },
+        no: {
+          subtitle: "Kontemplativt øyeblikk",
+          text: "Portrettutsnitt fra et kontemplativt fortellerøyeblikk."
+        }
       }
     },
     {
@@ -443,6 +702,16 @@
       alt: {
         en: "Story image with rich tones and textured backdrop.",
         no: "Fortellerbilde med rike toner og teksturert bakgrunn."
+      },
+      backside: {
+        en: {
+          subtitle: "Textured Backdrop",
+          text: "Story image with rich tones and textured backdrop."
+        },
+        no: {
+          subtitle: "Teksturert bakgrunn",
+          text: "Fortellerbilde med rike toner og teksturert bakgrunn."
+        }
       }
     },
     {
@@ -455,6 +724,16 @@
       alt: {
         en: "Horizontal documentary shot from a storytelling project.",
         no: "Horisontalt dokumentarbilde fra et fortellerprosjekt."
+      },
+      backside: {
+        en: {
+          subtitle: "Documentary Scene",
+          text: "Horizontal documentary shot from a storytelling project."
+        },
+        no: {
+          subtitle: "Dokumentarscene",
+          text: "Horisontalt dokumentarbilde fra et fortellerprosjekt."
+        }
       }
     },
     {
@@ -467,6 +746,16 @@
       alt: {
         en: "Environmental frame from an artistic storytelling context.",
         no: "Miljøutsnitt fra en kunstnerisk fortellerkontekst."
+      },
+      backside: {
+        en: {
+          subtitle: "Artistic Context",
+          text: "Environmental frame from an artistic storytelling context."
+        },
+        no: {
+          subtitle: "Kunstnerisk kontekst",
+          text: "Miljøutsnitt fra en kunstnerisk fortellerkontekst."
+        }
       }
     },
     {
@@ -479,6 +768,16 @@
       alt: {
         en: "Landscape composition from Neha Verma's visual archive.",
         no: "Landskapskomposisjon fra Neha Vermas visuelle arkiv."
+      },
+      backside: {
+        en: {
+          subtitle: "Visual Archive",
+          text: "Landscape composition from Neha Verma's visual archive."
+        },
+        no: {
+          subtitle: "Visuelt arkiv",
+          text: "Landskapskomposisjon fra Neha Vermas visuelle arkiv."
+        }
       }
     }
   ];
