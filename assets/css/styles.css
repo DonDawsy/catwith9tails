@@ -614,7 +614,7 @@ h3 {
 }
 
 .portfolio-flip.is-flipped .portfolio-flip-inner {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
 }
 
 .portfolio-back-subtitle {
