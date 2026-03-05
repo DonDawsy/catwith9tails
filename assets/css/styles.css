@@ -715,6 +715,33 @@ body.lightbox-open {
   line-height: 1.45;
 }
 
+.bibliography {
+  background: linear-gradient(180deg, rgba(247, 241, 231, 0.75), rgba(240, 229, 214, 0.6));
+  border-top: 1px solid rgba(116, 79, 52, 0.12);
+  border-bottom: 1px solid rgba(116, 79, 52, 0.12);
+}
+
+.bibliography-inner {
+  max-width: 920px;
+}
+
+.bibliography h2 {
+  margin: 0.7rem 0 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+}
+
+.bibliography-list {
+  margin: 1.2rem 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+  color: #382a20;
+}
+
+.bibliography-list li {
+  padding-left: 0.15rem;
+}
+
 .contact {
   position: relative;
 }
