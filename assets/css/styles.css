@@ -529,6 +529,8 @@ h3 {
   border-radius: inherit;
   overflow: hidden;
   -webkit-mask-image: -webkit-radial-gradient(white, black);
+  transform: rotateY(0deg);
+  transition: transform 620ms cubic-bezier(0.19, 0.83, 0.24, 0.99);
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   will-change: transform;
@@ -623,14 +625,8 @@ h3 {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-front {
-    transform: rotateY(-26deg);
-    opacity: 0.9;
-  }
-
-  .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-back {
-    transform: rotateY(76deg);
-    opacity: 0.22;
+  .featured-grid .portfolio-flip:not(.is-flipped):hover .portfolio-flip-inner {
+    transform: rotateY(-24deg);
   }
 }
 
