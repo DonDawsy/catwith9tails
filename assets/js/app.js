@@ -78,17 +78,20 @@
       }
     });
 
+    const ariaNodes = document.querySelectorAll("[data-i18n-aria-label]");
+    ariaNodes.forEach((node) => {
+      const key = node.getAttribute("data-i18n-aria-label");
+      const value = t(key, lang);
+      if (value !== key) {
+        node.setAttribute("aria-label", value);
+      }
+    });
+
     langButtons.forEach((button) => {
       const active = button.dataset.langBtn === lang;
       button.classList.toggle("active", active);
       button.setAttribute("aria-pressed", String(active));
     });
-
-    const switchLabel = lang === "no" ? "Sprakvalg" : "Language switch";
-    const langSwitch = document.querySelector(".lang-switch");
-    if (langSwitch) {
-      langSwitch.setAttribute("aria-label", switchLabel);
-    }
 
     updateLightboxText(lang);
   }
@@ -116,7 +119,7 @@
 
     const image = document.createElement("img");
     image.src = `${item.srcBase}.jpg`;
-    image.alt = item.alt[lang] || item.alt[fallbackLang] || "Neha Verma photograph.";
+    image.alt = item.alt[lang] || item.alt[fallbackLang] || t("ui.flipItemLabel", lang);
     image.loading = eager ? "eager" : "lazy";
     image.decoding = "async";
     image.width = item.width;

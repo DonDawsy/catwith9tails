@@ -9,6 +9,10 @@
       ui: {
         skipToContent: "Skip to content",
         toggleMenu: "Toggle menu",
+        languageSwitch: "Language switch",
+        brandHome: "A Cat With 9 Tales home",
+        primaryNavigation: "Primary navigation",
+        coreThemes: "Core themes",
         flipToBack: "Show story text",
         flipToFront: "Show image",
         flipItemLabel: "Portfolio image",
@@ -92,6 +96,10 @@
       ui: {
         skipToContent: "Hopp til innhold",
         toggleMenu: "Åpne eller lukk meny",
+        languageSwitch: "Språkvalg",
+        brandHome: "A Cat With 9 Tales hjem",
+        primaryNavigation: "Hovednavigasjon",
+        coreThemes: "Kjernetemaer",
         flipToBack: "Vis fortellertekst",
         flipToFront: "Vis bilde",
         flipItemLabel: "Porteføljebilde",
@@ -107,13 +115,13 @@
         contact: "Kontakt"
       },
       hero: {
-        kicker: "Fortellerportefølje",
+        kicker: "Neha Verma",
         title: "A Cat With 9 Tales",
         identityShort: "Indisk-norsk forteller",
         mantra1: "9 liv",
         mantra2: "9 linser",
         mantra3: "9 fortellinger",
-        identity: "Jeg er en indisk-norsk forteller.",
+        identity: "Indisk-norsk forteller som bygger broer mellom kulturer",
         cta: "Start samtalen"
       },
       about: {
@@ -121,13 +129,12 @@
         heading: "Fortellinger som bygger broer",
         signoff: "Skal vi prøve sammen?",
         paragraphs: [
-          "Jeg er født i India, i en kultur gjennomsyret av rike og levende fortellerstrømmer. Der vokste jeg opp med kjærlighet til historier og med generasjonsbånd vevd i ord.",
-          "I familien min var de eldste tradisjonelle indiske, romholdende sannhetssøkere. De delte folkeeventyr og urgamle myter, og vevde dem inn i nåtiden for å gi mer nyanserte perspektiver i hverdagen.",
-          "Jeg vokste opp med mytologier som aldri mistet forbindelsen til nåtiden, og som alltid strakte seg mot fremtiden. Derfor kjenner jeg meg hjemme i rommet mellom verdener.",
-          "Formet av Livets skole i India, og senere utdannet ved School of Storytelling i England, bærer jeg videre en tredje generasjons fortellerlinje i blod, ben og praksis.",
-          "Som indisk-norsk har spørsmål om tilhørighet og identitet, søken etter røtter og ønsket om å bygge broer mellom øst og vest blitt dypt personlige reiser. Selve søken gir meg fargene og trådene jeg vever mine egne fortellinger med.",
-          "I en stadig mer kaotisk verden, der avstand og annerledeshet kan drive oss fra hverandre, kjennes denne brobyggingen mer presserende enn noen gang.",
-          "Hvordan bygger man en bro? Ett steg. En sving i elven. En stein om gangen. Jeg begynner der jeg står."
+          "Født i India, i en kultur gjennomsyret av rike og flytende fortellerstrømmer, vokste jeg opp med kjærlighet til fortellinger og med å veve tråder mellom generasjoner.",
+          "Generasjoner av mine eldre har vært tradisjonelle indiske fortellere og sannhetssøkere som holder rom for andre. De delte gamle folkeeventyr og urgamle myter, og vevde dem sammen med samtidens virkelighet for å gi nyanserte perspektiver på hverdagslivet.\nJeg vokste opp med mytologier som aldri mistet forbindelsen til nåtiden, og som alltid strakte seg mot fremtiden. Derfor kjenner jeg meg hjemme i rommene som flyter mellom verdener.",
+          "Formet av kultur ved Livets skole i India, og senere utdannet ved School of Storytelling i England, bærer jeg videre i praksisen min den glødende fakkelen fra en generasjonell fortellerlinje som flyter i blodet mitt og sitter i knoklene.",
+          "Som indisk-norsk, og nå plassert «vest for solen og øst for månen», har spørsmål om tilhørighet, identitet og søken etter dypere vandrende røtter blitt dypt personlige reiser.\nSelve søken gir meg fargene og trådene jeg nå vever mine egne fortellinger med.",
+          "I en stadig mer kaotisk verden, der avstand og annerledeshet kan rive oss fra hverandre, kjennes ønsket om å bygge broer mer presserende enn noen gang før, som helt nødvendig brobygging.",
+          "Hvordan bygger man en bro som lar fortellinger reise mellom iskalde, furukledde fjorder og dampende monsunelver kantet av jungel?\nEtt steg.\nEn sving i elven.\nEn stein av gangen.\n\nJeg begynner der jeg står."
         ]
       },
       portfolio: {
@@ -156,15 +163,15 @@
         archivePortraitI: "Arkivportrett I",
         archivePortraitII: "Arkivportrett II",
         archivePortraitIII: "Arkivportrett III",
-        storyMedicine: "Story Medicine",
-        generationalJourneys: "Generational Journeys",
-        soundJourneys: "Sound Journeys",
-        childrensStorytelling: "Children's Storytelling",
-        flowArtStory: "Flow Art & Story",
-        communityGatherings: "Community Gatherings",
-        immersiveStoryRetreats: "Immersive Story Retreats",
-        storyPictureBooks: "Story Picture Books",
-        handcraftedStory: "Handcrafted Story"
+        storyMedicine: "Historiemedisin",
+        generationalJourneys: "Generasjonsreiser",
+        soundJourneys: "Lydreiser",
+        childrensStorytelling: "Fortelling for barn",
+        flowArtStory: "Flytkunst og fortelling",
+        communityGatherings: "Fellessamlinger",
+        immersiveStoryRetreats: "Fordypende fortellerretreater",
+        storyPictureBooks: "Bildebokfortellinger",
+        handcraftedStory: "Håndlaget fortelling"
       }
     }
   };
@@ -291,7 +298,7 @@
       captionKey: "captions.soundJourneys",
       alt: {
         en: "Sound journey session with listeners moving through story and rhythm together.",
-        no: "Sound journey session with listeners moving through story and rhythm together."
+        no: "Lydreiseøkt der lyttere beveger seg sammen gjennom fortelling og rytme."
       },
       backside: {
         en: {
@@ -299,8 +306,8 @@
           text: "In the beginning, out of silence came sound. The human voice and cadence of some of the oldest spoken words (mantras) with the rhythm and sonority of intuitive instruments (yantras) create soundscapes where listeners and storyteller travel deeper together through the current of a story."
         },
         no: {
-          subtitle: "Voice, Rhythm, and Collective Listening",
-          text: "In the beginning, out of silence came sound. The human voice and cadence of some of the oldest spoken words (mantras) with the rhythm and sonority of intuitive instruments (yantras) create soundscapes where listeners and storyteller travel deeper together through the current of a story."
+          subtitle: "Stemme, rytme og kollektiv lytting",
+          text: "I begynnelsen kom lyden ut av stillheten. Menneskestemmen og rytmen i noen av de eldste uttalte ordene (mantraer), sammen med puls og klang fra intuitive instrumenter (yantraer), skaper lydlandskap der lyttere og forteller reiser dypere sammen gjennom fortellingens strøm."
         }
       }
     },
@@ -446,7 +453,7 @@
       captionKey: "captions.communityGatherings",
       alt: {
         en: "Community storytelling gathering around shared food and conversation.",
-        no: "Community storytelling gathering around shared food and conversation."
+        no: "Fellessamling rundt fortelling, mat og samtale."
       },
       backside: {
         en: {
@@ -454,8 +461,8 @@
           text: "Across cultures, stories and food have always travelled together. Community storytelling events bring people together in shared civic spaces to listen, eat, and connect. Food nourishes the body, while stories nourish the soul. A good meal and a good story remain two of humanity's oldest ways of building community."
         },
         no: {
-          subtitle: "Food, Story, and Shared Tables",
-          text: "Across cultures, stories and food have always travelled together. Community storytelling events bring people together in shared civic spaces to listen, eat, and connect. Food nourishes the body, while stories nourish the soul. A good meal and a good story remain two of humanity's oldest ways of building community."
+          subtitle: "Mat, fortelling og felles bord",
+          text: "På tvers av kulturer har fortellinger og mat alltid reist sammen. Fellessamlinger med fortelling bringer mennesker sammen i delte møteplasser for å lytte, spise og knytte bånd. Maten nærer kroppen, mens fortellinger nærer sjelen. Et godt måltid og en god fortelling er fortsatt to av menneskehetens eldste måter å bygge fellesskap på."
         }
       }
     },
@@ -469,7 +476,7 @@
       captionKey: "captions.storyMedicine",
       alt: {
         en: "Story medicine session in performance space.",
-        no: "Story medicine session in performance space."
+        no: "Historiemedisin-økt i et scenisk rom."
       },
       backside: {
         en: {
@@ -477,8 +484,8 @@
           text: "Folktales and myths that carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
         },
         no: {
-          subtitle: "Archetypal Stories as Inner Maps",
-          text: "Folktales and myths that carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
+          subtitle: "Arketypiske fortellinger som indre kart",
+          text: "Folkeeventyr og myter bærer tidstestede gjenkjennelseskoder som taler direkte til underbevisstheten. En glemt del av selvet blir sett. Et skjult spørsmål finner en vei. Fortellingen blir en stille form for alkymi som hjelper oss å vokse mot en helere og sannere versjon av oss selv."
         }
       }
     },
@@ -756,7 +763,7 @@
       captionKey: "captions.immersiveStoryRetreats",
       alt: {
         en: "Story retreat moment in an outdoor landscape setting.",
-        no: "Story retreat moment in an outdoor landscape setting."
+        no: "Øyeblikk fra fortellerretreat i et utendørs landskap."
       },
       backside: {
         en: {
@@ -764,8 +771,8 @@
           text: "Stories live in landscapes - Mountains, forests, coastlines, and deserts all hold the echoes of the stories that grew from them. Through immersive retreats and open-air story walks, participants explore mythology while moving through the land itself. Travel becomes both an outer and inner journey where place, story, and personal reflection meet."
         },
         no: {
-          subtitle: "Journeys Through Landscape and Myth",
-          text: "Stories live in landscapes - Mountains, forests, coastlines, and deserts all hold the echoes of the stories that grew from them. Through immersive retreats and open-air story walks, participants explore mythology while moving through the land itself. Travel becomes both an outer and inner journey where place, story, and personal reflection meet."
+          subtitle: "Reiser gjennom landskap og myte",
+          text: "Fortellinger lever i landskap. Fjell, skoger, kystlinjer og ørkener bærer alle ekkoet av fortellingene som vokste frem der. Gjennom fordypende retreater og åpne fortellervandringer utforsker deltakerne mytologi mens de beveger seg i selve landskapet. Reisen blir både en ytre og en indre ferd der sted, fortelling og personlig refleksjon møtes."
         }
       }
     },
@@ -779,7 +786,7 @@
       captionKey: "captions.generationalJourneys",
       alt: {
         en: "Generational journey portrait centered on body memory and story.",
-        no: "Generational journey portrait centered on body memory and story."
+        no: "Portrett fra en generasjonsreise med fokus på kroppsminne og fortelling."
       },
       backside: {
         en: {
@@ -787,8 +794,8 @@
           text: "Stories move through generations like roots through soil. Through guided visualization, movement, and story circles, participants explore the echoes of personal and ancestral stories carried in the body. These journeys acknowledge the dance of feminine and masculine energies that shape us."
         },
         no: {
-          subtitle: "Somatic Storytelling and Ancestral Memory",
-          text: "Stories move through generations like roots through soil. Through guided visualization, movement, and story circles, participants explore the echoes of personal and ancestral stories carried in the body. These journeys acknowledge the dance of feminine and masculine energies that shape us."
+          subtitle: "Somatisk fortelling og forfedres minner",
+          text: "Fortellinger beveger seg gjennom generasjoner som røtter gjennom jord. Gjennom guidet visualisering, bevegelse og fortellersirkler utforsker deltakerne ekkoene av personlige og forfedres fortellinger som bæres i kroppen. Disse reisene anerkjenner samspillet mellom feminine og maskuline energier som former oss."
         }
       }
     },
@@ -802,7 +809,7 @@
       captionKey: "captions.flowArtStory",
       alt: {
         en: "Flow art workshop where story transforms into visual form.",
-        no: "Flow art workshop where story transforms into visual form."
+        no: "Flow art-workshop der fortelling blir til visuelt uttrykk."
       },
       backside: {
         en: {
@@ -810,8 +817,8 @@
           text: "Sometimes stories desire flow into images. Color becomes the main language. Through story as a frame and music as gentle creative guidance, participants allow imagination and story to move intuitively onto paper. The result is visual traces of inner landscapes emerging through story."
         },
         no: {
-          subtitle: "Letting Stories Become Images",
-          text: "Sometimes stories desire flow into images. Color becomes the main language. Through story as a frame and music as gentle creative guidance, participants allow imagination and story to move intuitively onto paper. The result is visual traces of inner landscapes emerging through story."
+          subtitle: "Når fortellinger blir bilder",
+          text: "Noen ganger vil fortellinger flyte over i bilder. Farge blir hovedspråket. Med fortellingen som ramme og musikk som varsom kreativ veiledning lar deltakerne fantasi og fortelling bevege seg intuitivt ut på papir. Resultatet er visuelle spor av indre landskap som trer frem gjennom fortelling."
         }
       }
     },
@@ -825,7 +832,7 @@
       captionKey: "captions.childrensStorytelling",
       alt: {
         en: "Children gathered for participatory storytelling.",
-        no: "Children gathered for participatory storytelling."
+        no: "Barn samlet til deltakerbasert fortelling."
       },
       backside: {
         en: {
@@ -833,8 +840,8 @@
           text: "In a fast digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
         },
         no: {
-          subtitle: "Cultivating weaves for the next generation",
-          text: "In a fast digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
+          subtitle: "Vi vever for neste generasjon",
+          text: "I en rask digital verden gir fortelling barn den sjeldne gaven av et roligere tempo og det å lytte sammen. Gjennom lekende deltakelse, eventyr, dyrefortellinger og folkeeventyr gjenoppdager unge lyttere fantasi, nysgjerrighet og empati, samt verktøy for å forstå verden og seg selv bedre."
         }
       }
     },
@@ -848,7 +855,7 @@
       captionKey: "captions.storyPictureBooks",
       alt: {
         en: "Story picture book spread with illustrated narrative scenes.",
-        no: "Story picture book spread with illustrated narrative scenes."
+        no: "Oppslag fra bildebok med illustrerte fortellerscener."
       },
       backside: {
         en: {
@@ -856,8 +863,8 @@
           text: "Picture books that allow stories to travel through both words and images, inviting readers of all ages into a visual storytelling experience. Through carefully crafted imagery and narrative, these books carry timeless tales across generations, cultures, and languages."
         },
         no: {
-          subtitle: "Stories that Travel Across Pages",
-          text: "Picture books that allow stories to travel through both words and images, inviting readers of all ages into a visual storytelling experience. Through carefully crafted imagery and narrative, these books carry timeless tales across generations, cultures, and languages."
+          subtitle: "Fortellinger som vandrer over sider",
+          text: "Bildebøker som lar fortellinger reise gjennom både ord og bilder, og inviterer lesere i alle aldre inn i en visuell fortelleropplevelse. Med gjennomarbeidede illustrasjoner og fortellergrep bærer disse bøkene tidløse historier på tvers av generasjoner, kulturer og språk."
         }
       }
     },
@@ -871,7 +878,7 @@
       captionKey: "captions.handcraftedStory",
       alt: {
         en: "Handcrafted storytelling objects made from natural materials.",
-        no: "Handcrafted storytelling objects made from natural materials."
+        no: "Håndlagde fortellerobjekter av naturmaterialer."
       },
       backside: {
         en: {
@@ -879,8 +886,8 @@
           text: "Through natural materials like clay and textiles, perfumes and flowers, puppets and masks, shells stones and talismans stories come to life in a new dimension. Each object a quiet doorway back into the world of story. This is an evolving practice where storytelling meets traditional craft, carrying the spirit of the tale into tangible form."
         },
         no: {
-          subtitle: "Some stories want to be held in our hands.",
-          text: "Through natural materials like clay and textiles, perfumes and flowers, puppets and masks, shells stones and talismans stories come to life in a new dimension. Each object a quiet doorway back into the world of story. This is an evolving practice where storytelling meets traditional craft, carrying the spirit of the tale into tangible form."
+          subtitle: "Noen fortellinger vil holdes i hendene våre",
+          text: "Gjennom naturmaterialer som leire og tekstiler, dufter og blomster, dukker og masker, skjell, steiner og talismaner får fortellinger liv i en ny dimensjon. Hvert objekt er en stille døråpning tilbake til fortellingens verden. Dette er en praksis i utvikling der fortelling møter tradisjonelt håndverk og bærer fortellingens ånd inn i håndgripelig form."
         }
       }
     }
