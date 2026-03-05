@@ -24,6 +24,14 @@
   const sectionLinks = Array.from(document.querySelectorAll("[data-section-link]"));
   const langButtons = Array.from(document.querySelectorAll("[data-lang-btn]"));
   const metaDescription = document.querySelector('meta[name="description"]');
+  const excludedFullGalleryIds = new Set([
+    "IMG_0172",
+    "img-2184",
+    "img-2840",
+    "img-7295",
+    "img-7300",
+    "img-7323"
+  ]);
 
   let revealObserver;
   let sectionObserver;
@@ -401,7 +409,9 @@
   function renderGallery(lang) {
     galleryGrid.innerHTML = "";
 
-    portfolioItems.forEach((item, index) => {
+    const fullGalleryItems = portfolioItems.filter((item) => !excludedFullGalleryIds.has(item.id));
+
+    fullGalleryItems.forEach((item, index) => {
       const transitionDelay = isReducedMotion() ? "0ms" : `${Math.min((index % 12) * 50, 420)}ms`;
       const card = createGalleryCard(item, lang, transitionDelay);
       galleryGrid.appendChild(card);
