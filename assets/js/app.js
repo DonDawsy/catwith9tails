@@ -238,13 +238,6 @@
     media.appendChild(createPicture(item, lang));
     imageButton.appendChild(media);
 
-    if (item.captionKey) {
-      const caption = document.createElement("p");
-      caption.className = "portfolio-front-caption";
-      caption.textContent = t(item.captionKey, lang);
-      imageButton.appendChild(caption);
-    }
-
     imageButton.addEventListener("click", () => {
       openImageLightbox(item, lang, imageButton);
     });

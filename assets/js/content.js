@@ -30,7 +30,7 @@
         mantra1: "9 Lives",
         mantra2: "9 Lenses",
         mantra3: "9 Tales",
-        identity: "I am an Indian-Norwegian bridge-building storyteller.",
+        identity: "Indian Norwegian storyteller building bridges between cultures",
         cta: "Begin the conversation"
       },
       about: {
@@ -43,7 +43,7 @@
           "Steeped in culture at the School of Life in India, and later educated at the School of Storytelling in England, I carry forward into my practice the glowing torch of a generational lineage of stories that flow in my blood and are settled in my bones.",
           "As an Indian-Norwegian, who now finds herself \"West of the Sun and East of the moon\" questions of belonging and identity and a searching for inner deeper traveling roots have become deeply personal quests.\nThe seeking itself gives me the colors and threads with which I now weave my own stories.",
           "In an increasingly chaotic world, where separation and otherness can pull us apart, this desire to build bridges feels more urgent than ever like essential bridge building.",
-          "How does one build a bridge?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
+          "How does one build a bridge for stories to travel between icy pine-lined fjords and steamy jungle-fringed monsoon rivers?\nOne step.\nOne bend of the river.\nOne stone at a time.\n\nI begin where I stand."
         ]
       },
       portfolio: {
@@ -284,7 +284,7 @@
       srcBase: "assets/images/optimized/1a0bd294-63b2-40f2-93ac-e0d70841cc9c",
       width: 1650,
       height: 2200,
-      featured: false,
+      featured: true,
       captionKey: null,
       alt: {
         en: "Portrait photograph from Neha Verma's storytelling archive.",
@@ -306,7 +306,7 @@
       srcBase: "assets/images/optimized/3ed0bddc-9eb2-49d7-a121-1c6e571a4849",
       width: 1650,
       height: 2200,
-      featured: false,
+      featured: true,
       captionKey: null,
       alt: {
         en: "Performance image from a reflective storytelling evening.",
@@ -328,7 +328,7 @@
       srcBase: "assets/images/optimized/50ab27b4-3d4a-4e32-a034-ca35dffd008a",
       width: 1650,
       height: 2200,
-      featured: false,
+      featured: true,
       captionKey: null,
       alt: {
         en: "Story portrait with layered textures and warm light.",
