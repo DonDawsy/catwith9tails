@@ -68,7 +68,10 @@
         mothers: "Journeys held by generations",
         tomter: "Stories in shared civic spaces",
         candle: "Firelight and listening",
-        audience: "Gathered in attentive silence"
+        audience: "Gathered in attentive silence",
+        archivePortraitI: "Archive portrait I",
+        archivePortraitII: "Archive portrait II",
+        archivePortraitIII: "Archive portrait III"
       }
     },
     no: {
@@ -140,7 +143,10 @@
         mothers: "Reiser båret av generasjoner",
         tomter: "Fortellinger i felles møteplasser",
         candle: "Ildlys og lyttende nærvær",
-        audience: "Samlet i oppmerksom stillhet"
+        audience: "Samlet i oppmerksom stillhet",
+        archivePortraitI: "Arkivportrett I",
+        archivePortraitII: "Arkivportrett II",
+        archivePortraitIII: "Arkivportrett III"
       }
     }
   };
@@ -285,7 +291,7 @@
       width: 1650,
       height: 2200,
       featured: true,
-      captionKey: null,
+      captionKey: "captions.archivePortraitI",
       alt: {
         en: "Portrait photograph from Neha Verma's storytelling archive.",
         no: "Portrettfoto fra Neha Vermas fortellerarkiv."
@@ -307,7 +313,7 @@
       width: 1650,
       height: 2200,
       featured: true,
-      captionKey: null,
+      captionKey: "captions.archivePortraitII",
       alt: {
         en: "Performance image from a reflective storytelling evening.",
         no: "Fremføringsbilde fra en reflekterende fortellerkveld."
@@ -329,7 +335,7 @@
       width: 1650,
       height: 2200,
       featured: true,
-      captionKey: null,
+      captionKey: "captions.archivePortraitIII",
       alt: {
         en: "Story portrait with layered textures and warm light.",
         no: "Fortellerportrett med lag av teksturer og varmt lys."
