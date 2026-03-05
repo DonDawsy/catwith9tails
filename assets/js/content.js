@@ -378,28 +378,6 @@
       }
     },
     {
-      id: "img-2184",
-      srcBase: "assets/images/optimized/img-2184",
-      width: 2200,
-      height: 1650,
-      featured: false,
-      captionKey: null,
-      alt: {
-        en: "Wide scene from a storytelling gathering.",
-        no: "Bred scene fra en fortellersamling."
-      },
-      backside: {
-        en: {
-          subtitle: "Wide Gathering",
-          text: "Wide scene from a storytelling gathering."
-        },
-        no: {
-          subtitle: "Bred samling",
-          text: "Bred scene fra en fortellersamling."
-        }
-      }
-    },
-    {
       id: "img-5943",
       srcBase: "assets/images/optimized/img-5943",
       width: 2200,
@@ -530,28 +508,6 @@
         no: {
           subtitle: "Arrangementets stemning",
           text: "Bred komposisjon som viser stemningen rundt et fortellerarrangement."
-        }
-      }
-    },
-    {
-      id: "img-7300",
-      srcBase: "assets/images/optimized/img-7300",
-      width: 2200,
-      height: 1225,
-      featured: false,
-      captionKey: null,
-      alt: {
-        en: "Environmental image from a staged storytelling context.",
-        no: "Miljøbilde fra en iscenesatt fortellerkontekst."
-      },
-      backside: {
-        en: {
-          subtitle: "Staged Context",
-          text: "Environmental image from a staged storytelling context."
-        },
-        no: {
-          subtitle: "Iscenesatt kontekst",
-          text: "Miljøbilde fra en iscenesatt fortellerkontekst."
         }
       }
     },
@@ -706,28 +662,6 @@
         no: {
           subtitle: "Fortellersekvens",
           text: "Vertikalt utsnitt som dokumenterer en fortellersekvens."
-        }
-      }
-    },
-    {
-      id: "img-7323",
-      srcBase: "assets/images/optimized/img-7323",
-      width: 1239,
-      height: 2200,
-      featured: false,
-      captionKey: null,
-      alt: {
-        en: "Portrait frame from a contemplative narrative moment.",
-        no: "Portrettutsnitt fra et kontemplativt fortellerøyeblikk."
-      },
-      backside: {
-        en: {
-          subtitle: "Contemplative Moment",
-          text: "Portrait frame from a contemplative narrative moment."
-        },
-        no: {
-          subtitle: "Kontemplativt øyeblikk",
-          text: "Portrettutsnitt fra et kontemplativt fortellerøyeblikk."
         }
       }
     },
