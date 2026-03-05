@@ -60,8 +60,8 @@
       contact: {
         eyebrow: "Contact",
         heading: "Let us build one bridge, one story at a time.",
-        body: "For performances, workshops, speaking invitations, or collaborations, write directly.",
-        closing: "I begin where I stand. Shall we try together?"
+        body: "For performances, workshops, speaking invitations, or collaborations, reach out to:",
+        closing: "Let's begin where we stand. Shall we?"
       },
       footer: {
         line: "A Cat With 9 Tales · Neha Verma"
@@ -77,8 +77,8 @@
         archivePortraitII: "Archive portrait II",
         archivePortraitIII: "Archive portrait III",
         storyMedicine: "Story Medicine",
-        generationalJourneys: "Generational Journeys",
-        soundJourneys: "Sound Journeys",
+        dancingThroughTime: "Dancing Through Time",
+        soundJourneys: "Spaces of Sound",
         childrensStorytelling: "Children's Storytelling",
         flowArtStory: "Flow Art & Story",
         communityGatherings: "Community Gatherings",
@@ -164,7 +164,7 @@
         archivePortraitII: "Arkivportrett II",
         archivePortraitIII: "Arkivportrett III",
         storyMedicine: "Historiemedisin",
-        generationalJourneys: "Generasjonsreiser",
+        dancingThroughTime: "Generasjonsreiser",
         soundJourneys: "Lydreiser",
         childrensStorytelling: "Fortelling for barn",
         flowArtStory: "Flytkunst og fortelling",
@@ -235,7 +235,7 @@
       },
       backside: {
         en: {
-          subtitle: "Generational Journey",
+          subtitle: "Dancing Through Time",
           text: "A visual doorway into ancestral stories carried by women across time, borders, and language."
         },
         no: {
@@ -297,7 +297,7 @@
       featuredOrder: 3,
       captionKey: "captions.soundJourneys",
       alt: {
-        en: "Sound journey session with listeners moving through story and rhythm together.",
+        en: "Spaces of Sound session with listeners moving through story and rhythm together.",
         no: "Lydreiseøkt der lyttere beveger seg sammen gjennom fortelling og rytme."
       },
       backside: {
@@ -481,7 +481,7 @@
       backside: {
         en: {
           subtitle: "Archetypal Stories as Inner Maps",
-          text: "Folktales and myths that carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
+          text: "Folktales and myths carry time tested codes of recognition that speak directly to the subconscious. A forgotten part of the self feels seen. A hidden question finds a path. Story becomes a quiet form of alchemy, helping us grow toward a fuller and truer version of ourselves."
         },
         no: {
           subtitle: "Arketypiske fortellinger som indre kart",
@@ -783,9 +783,9 @@
       height: 2200,
       featured: true,
       featuredOrder: 2,
-      captionKey: "captions.generationalJourneys",
+      captionKey: "captions.dancingThroughTime",
       alt: {
-        en: "Generational journey portrait centered on body memory and story.",
+        en: "Dancing Through Time portrait centered on body memory and story.",
         no: "Portrett fra en generasjonsreise med fokus på kroppsminne og fortelling."
       },
       backside: {
@@ -837,7 +837,7 @@
       backside: {
         en: {
           subtitle: "Cultivating weaves for the next generation",
-          text: "In a fast digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
+          text: "In a fast paced digital world, storytelling offers children the rare gift of a slower rhythm and listening together. Through playful participation, wonder tales, animal tales and folk stories, young listeners rediscover imagination, curiosity, and empathy and tools for understanding the world and themselves better."
         },
         no: {
           subtitle: "Vi vever for neste generasjon",
