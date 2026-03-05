@@ -554,10 +554,8 @@ h3 {
 
 .portfolio-flip-front {
   background: var(--surface);
-  transform: rotateY(0deg) translateZ(0);
+  transform: rotateY(0deg);
   z-index: 2;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .portfolio-flip-front picture,
@@ -617,8 +615,6 @@ h3 {
   gap: 0.55rem;
   padding: 1rem;
   z-index: 1;
-  opacity: 0;
-  pointer-events: none;
   background:
     linear-gradient(165deg, rgba(244, 234, 220, 0.98), rgba(232, 214, 192, 0.95)),
     radial-gradient(circle at 80% 18%, rgba(153, 90, 56, 0.14), transparent 55%);
@@ -631,16 +627,15 @@ h3 {
 }
 
 .portfolio-flip.is-flipped .portfolio-flip-front {
-  transform: rotateY(-180deg);
-  opacity: 0;
-  pointer-events: none;
+  transform: rotateY(0deg);
 }
 
 .portfolio-flip.is-flipped .portfolio-flip-back {
-  transform: rotateY(0deg);
-  opacity: 1;
-  pointer-events: auto;
-  z-index: 3;
+  transform: rotateY(180deg);
+}
+
+.portfolio-flip.is-flipped .portfolio-flip-inner {
+  transform: rotateY(-180deg);
 }
 
 .portfolio-back-subtitle {
