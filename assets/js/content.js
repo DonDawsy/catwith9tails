@@ -2,9 +2,9 @@
   const translations = {
     en: {
       meta: {
-        title: "A Cat With 9 Tales | Neha Verma",
+        title: "A Cat With 9 Tales | Neha Verma, Indian-Norwegian Storyteller",
         description:
-          "Neha Verma of Neha Verma, an Indian-Norwegian storyteller weaving bridges between cultures."
+          "A Cat With 9 Tales is the storytelling practice of Neha Verma, an Indian-Norwegian storyteller offering performances, workshops, and cultural storytelling experiences in Norway."
       },
       ui: {
         skipToContent: "Skip to content",
@@ -98,9 +98,9 @@
     },
     no: {
       meta: {
-        title: "A Cat With 9 Tales | Neha Verma",
+        title: "A Cat With 9 Tales | Neha Verma, indisk-norsk forteller",
         description:
-          "Fortellerporteføljen til Neha Verma, en indisk-norsk forteller som bygger broer mellom kulturer."
+          "A Cat With 9 Tales er fortellerpraksisen til Neha Verma, en indisk-norsk forteller som tilbyr forestillinger, workshops og kulturelle fortelleropplevelser i Norge."
       },
       ui: {
         skipToContent: "Hopp til innhold",
