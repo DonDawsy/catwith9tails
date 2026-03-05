@@ -8,7 +8,7 @@ Static bilingual portfolio site for storyteller **Neha Verma**.
 - `assets/css/styles.css` - design tokens, layout, typography, motion, responsive behavior.
 - `assets/js/content.js` - bilingual copy and portfolio item data.
 - `assets/js/app.js` - language toggle, dynamic rendering, active nav state, reveal animation, mobile menu.
-- `images/` - original source photos (including `.heic`).
+- `assets/images/unoptimized/` - incoming source photos to process (including `.heic`).
 - `assets/images/optimized/` - web-ready generated assets (`.jpg` + `.webp`) and `manifest.csv`.
 - `scripts/prepare-images.sh` - image conversion pipeline.
 
@@ -24,7 +24,7 @@ Open `http://localhost:8080`.
 
 ## Image Pipeline
 
-Generate optimized images from originals:
+Generate optimized images from incoming source files:
 
 ```bash
 ./scripts/prepare-images.sh
@@ -38,11 +38,13 @@ MAX_SIZE=2200 WEBP_QUALITY=82 JPG_FORMAT_OPTIONS=best ./scripts/prepare-images.s
 
 What the script does:
 
-- Keeps originals in `images/` untouched.
-- Rebuilds `assets/images/optimized/` on each run.
-- Converts all source files to optimized `.jpg`.
+- Reads source files from `assets/images/unoptimized/`.
+- Converts each file to optimized `.jpg`.
 - Creates `.webp` copies via `cwebp`.
-- Writes `assets/images/optimized/manifest.csv` for traceability.
+- Overwrites matching files in `assets/images/optimized/` using the slugged filename.
+- Updates `assets/images/optimized/manifest.csv` for traceability.
+- Auto-adds new images to `portfolioItems` in `assets/js/content.js` (full photo archive) with default metadata.
+- Deletes the source file from `assets/images/unoptimized/` only after both optimized files are verified.
 
 ## Editing Content
 
