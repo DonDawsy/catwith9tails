@@ -985,6 +985,50 @@
         }
       }
     },
+    {
+      id: "img-8210",
+      srcBase: "assets/images/optimized/img-8210",
+      width: 1650,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Img 8210.",
+        no: "Arkivfoto: Img 8210."
+      },
+      backside: {
+        en: {
+          subtitle: "Img 8210",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Img 8210",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
+    {
+      id: "untitled-7",
+      srcBase: "assets/images/optimized/untitled-7",
+      width: 2200,
+      height: 2200,
+      featured: false,
+      captionKey: null,
+      alt: {
+        en: "Archive photo: Untitled 7.",
+        no: "Arkivfoto: Untitled 7."
+      },
+      backside: {
+        en: {
+          subtitle: "Untitled 7",
+          text: "Archive photo from Neha Verma's storytelling practice."
+        },
+        no: {
+          subtitle: "Untitled 7",
+          text: "Arkivfoto fra Neha Vermas fortellerpraksis."
+        }
+      }
+    },
   ];
 
   window.siteContent = {
