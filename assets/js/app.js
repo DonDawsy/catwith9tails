@@ -34,8 +34,10 @@
   ]);
 
   let revealObserver;
-  let sectionObserver;
   let lightbox;
+  let trackedSections = [];
+  let activeSectionId = "";
+  let activeSectionFrame = 0;
 
   function byPath(object, path) {
     return path.split(".").reduce((acc, part) => {
@@ -56,6 +58,60 @@
 
   function isReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function setActiveSection(id) {
+    if (!id || activeSectionId === id) {
+      return;
+    }
+
+    activeSectionId = id;
+    sectionLinks.forEach((link) => {
+      if (link.dataset.sectionLink === id) {
+        link.setAttribute("aria-current", "true");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function getScrollSpyTargetY() {
+    const headerHeight = siteHeader ? siteHeader.getBoundingClientRect().height : 0;
+    return headerHeight + Math.min(window.innerHeight * 0.18, 160);
+  }
+
+  function updateActiveSection() {
+    if (!trackedSections.length) {
+      return;
+    }
+
+    const targetY = getScrollSpyTargetY();
+    let nextSectionId = trackedSections[0].id;
+
+    trackedSections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= targetY) {
+        nextSectionId = section.id;
+      }
+    });
+
+    const reachedPageBottom =
+      window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    if (reachedPageBottom) {
+      nextSectionId = trackedSections[trackedSections.length - 1].id;
+    }
+
+    setActiveSection(nextSectionId);
+  }
+
+  function scheduleActiveSectionUpdate() {
+    if (activeSectionFrame) {
+      return;
+    }
+
+    activeSectionFrame = window.requestAnimationFrame(() => {
+      activeSectionFrame = 0;
+      updateActiveSection();
+    });
   }
 
   function openMenu() {
@@ -442,37 +498,8 @@
       });
     }
 
-    if (sectionObserver) {
-      sectionObserver.disconnect();
-    }
-
-    const sections = Array.from(document.querySelectorAll("[data-section]"));
-    sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (!visible) {
-          return;
-        }
-
-        const id = visible.target.id;
-        sectionLinks.forEach((link) => {
-          if (link.dataset.sectionLink === id) {
-            link.setAttribute("aria-current", "true");
-          } else {
-            link.removeAttribute("aria-current");
-          }
-        });
-      },
-      {
-        rootMargin: "-35% 0px -45% 0px",
-        threshold: [0.1, 0.25, 0.5]
-      }
-    );
-
-    sections.forEach((section) => sectionObserver.observe(section));
+    trackedSections = Array.from(document.querySelectorAll("[data-section]"));
+    scheduleActiveSectionUpdate();
   }
 
   function applyLanguage(lang) {
@@ -503,7 +530,9 @@
     });
 
     nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) {
+      const link = event.target.closest("a[data-section-link]");
+      if (link) {
+        setActiveSection(link.dataset.sectionLink);
         closeMenu();
       }
     });
@@ -533,7 +562,11 @@
       if (window.innerWidth > 900) {
         closeMenu();
       }
+
+      scheduleActiveSectionUpdate();
     });
+
+    window.addEventListener("scroll", scheduleActiveSectionUpdate, { passive: true });
   }
 
   function initializeLanguageButtons() {
