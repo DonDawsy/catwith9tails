@@ -778,12 +778,42 @@ body.lightbox-open {
   background: rgba(240, 228, 211, 0.72);
 }
 
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .footer-inner p {
   margin: 0;
   color: #594838;
   font-size: 0.82rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.footer-credit {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: #594838;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-credit:hover {
+  color: #3a2e24;
+}
+
+.vd-logo {
+  display: block;
+  width: 22px;
+  height: auto;
+  opacity: 1;
 }
 
 .reveal {
